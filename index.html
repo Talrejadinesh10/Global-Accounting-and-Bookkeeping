@@ -13,31 +13,34 @@
       color: #2e1a1a;
     }
     header {
-      background-image: url('background');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 3px #000;
     }
     nav {
       background: #003366;
       color: white;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      padding: 12px 0;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
+      font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
@@ -52,6 +55,21 @@
     }
     section h2 {
       color: #003366;
+      margin-bottom: 10px;
+    }
+    .service-tile {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5faff;
+    }
+    .service-tile h3 a {
+      color: #003366;
+      text-decoration: none;
+    }
+    .service-tile h3 a:hover {
+      text-decoration: underline;
     }
     .founder-img {
       max-width: 200px;
@@ -108,54 +126,12 @@
 
   <section id="overview">
     <h2>Overview</h2>
-    <p>We provide expert financial and compliance services tailored to businesses in both global and Indian markets. From offshore audit support to local tax filings, our scalable solutions ensure accuracy, efficiency, and regulatory adherence.</p>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We deliver expert accounting and bookkeeping services to businesses worldwide. We support CPA firms in audit procedures for U.S.-based companies, ensuring full compliance and audit-readiness.</p>
+    <p>We are a trusted accounting and bookkeeping partner for clients across the globe. With a focus on accuracy, compliance, and transparency, we offer tailored financial solutions that support businesses in both international and Indian markets. Our goal is to enable informed decision-making through expert insights and timely reporting.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li><a href="global-services.html">Global Services</a>: Offshore accounting support for CPA firms and international clients</li>
-      <li><a href="india-services.html">India Services</a>: Local tax compliance, bookkeeping, and financial reporting</li>
-    </ul>
-  </section>
 
-  <section id="founder">
-    <h2>About the Founder</h2>
-    <img src="Dinesh Talreja Picture.jpeg" alt="Dinesh Talreja" class="founder-img" />
-    <p>With a passion for precision and a vision to simplify global finance, I founded Global Accounting & Bookkeeping Services to empower businesses worldwide. Backed by deep expertise in accounting, compliance, and financial reporting, I bring years of experience helping organizations streamline their books.</p>
-    <p><strong>- Dinesh Talreja, Founder, CEO (Chartered Accountant, 2018)</strong></p>
-    <p>Connect on LinkedIn: <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank">LinkedIn Profile</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="org">Organisation Name</label>
-      <input type="text" id="org" name="organisation" required />
-
-      <label for="designation">Designation</label>
-      <input type="text" id="designation" name="designation" required />
-
-      <label for="phone">Country Code with Mobile Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
-
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <div class="service-tile">
+      <h3><a href="global-services.html">Global Services</a></h3>
+      <p>We specialize in providing offshore accounting and audit support for CPA firms and multinational companies. From preparing audit schedules and reconciliations to delivering financial statements in QuickBooks and Xero, our team ensures international standards are met. We help streamline processes, improve accuracy, and reduce operational costs for global clients
