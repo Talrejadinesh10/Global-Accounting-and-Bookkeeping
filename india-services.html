@@ -12,36 +12,41 @@
       background-color: #f0f8ff;
       color: #2e1a1a;
     }
+
     header {
-      background-image: url('background');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
     }
-    header p {
-      font-size: 1.2rem;
-    }
+
     nav {
       background: #003366;
       color: white;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      padding: 12px 0;
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
+      font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -50,13 +55,54 @@
       border-radius: 8px;
       margin-top: 20px;
     }
+
     section h2 {
       color: #003366;
+      margin-bottom: 20px;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+
+    .service-tile {
+      margin-bottom: 25px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5faff;
     }
+
+    .service-tile h3 {
+      color: #003366;
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #002244;
+    }
+
     footer {
       background: #003366;
       color: white;
@@ -64,6 +110,7 @@
       padding: 20px;
       margin-top: 40px;
     }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; }
     }
@@ -71,8 +118,8 @@
 </head>
 <body>
   <header>
-    <h1>Global Accounting & Bookkeeping Services</h1>
-    <p>Expert Accounting Solutions for Indian Businesses</p>
+    <h1>India Services</h1>
+    <p>Expert Accounting & Compliance Support for Indian Businesses</p>
   </header>
 
   <nav>
@@ -83,20 +130,63 @@
 
   <section id="overview">
     <h2>Overview</h2>
-    <p>Our India-focused services are designed to simplify compliance, manage finances efficiently, and support SMEs and enterprises across regulatory and reporting requirements. We help businesses navigate the Indian tax and accounting landscape with ease.</p>
+    <p>We simplify financial processes for Indian companies through compliant, efficient, and scalable accounting and tax support. Our solutions serve startups, SMEs, and established enterprises.</p>
   </section>
 
   <section id="services">
-    <h2>India Services</h2>
-    <p>We provide comprehensive accounting and tax support to Indian companies across various industries. From GST filings to MIS reporting, our services ensure your financial systems are accurate and audit-ready.</p>
-    <ul>
-      <li>Monthly Bookkeeping and Accounting</li>
-      <li>GST, TDS & Income Tax Return Filings</li>
-      <li>Payroll Processing and Compliance</li>
-      <li>ROC Filings and MCA Compliance</li>
-      <li>Financial Analysis and MIS Reports</li>
-      <li>Support for Internal & Statutory Audits</li>
-    </ul>
+    <h2>Explore Our India Services</h2>
+
+    <div class="service-tile">
+      <h3>Bookkeeping & Accounting</h3>
+      <p>We provide monthly bookkeeping in Tally, Zoho Books, and QuickBooks. Track income, expenses, and manage ledgers with clean, audit-ready records.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>GST & TDS Return Filing</h3>
+      <p>Monthly and quarterly GST filings (GSTR-1, GSTR-3B), along with TDS compliance and Form 26Q submissions, aligned with statutory due dates.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Income Tax Filing</h3>
+      <p>Support for ITR preparation and filing for individuals, proprietorships, LLPs, and private limited companies with error-free computation.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>ROC & MCA Compliance</h3>
+      <p>Ensure timely filings with the Ministry of Corporate Affairs, including DIR-3 KYC, AOC-4, and MGT-7, and board resolution documentation.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Payroll Processing</h3>
+      <p>End-to-end monthly payroll processing with payslip generation, statutory deductions (PF/ESI/PT), and TDS computation for employees.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>MIS Reporting & Financial Analysis</h3>
+      <p>Custom MIS dashboards for cash flow, profitability, and cost-center tracking, empowering smarter business decisions through data insights.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="org">Organisation Name</label>
+      <input type="text" id="org" name="organisation" required />
+
+      <label for="designation">Designation</label>
+      <input type="text" id="designation" name="designation" required />
+
+      <label for="phone">Country Code with Mobile Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer>
