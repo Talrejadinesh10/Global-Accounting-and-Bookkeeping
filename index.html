@@ -87,6 +87,37 @@
       padding: 20px;
       margin-top: 40px;
     }
+    #services-summary {
+      background-color: #ffffff;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    .service-block {
+      margin-bottom: 30px;
+    }
+    .service-block h3 {
+      color: #7a1f2b;
+    }
+    .service-block a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #7a1f2b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .service-block a:hover {
+      text-decoration: underline;
+    }
+    .clickable-heading {
+      color: #7a1f2b;
+      text-decoration: none;
+    }
+    .clickable-heading:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 768px) {
       nav { flex-direction: column; }
     }
@@ -104,9 +135,28 @@
     <a href="india-services.html">India Services</a>
   </nav>
 
+  <section id="services-summary">
+    <h2>Overview</h2>
+    <p>We provide tailored accounting and bookkeeping services that span global markets and domestic Indian businesses. Our offerings are designed to ensure compliance, enhance financial clarity, and support strategic growth through precise reporting and process efficiency.</p>
+  </section>
+
   <section id="about">
     <h2>About Us</h2>
     <p>We deliver expert accounting and bookkeeping services to businesses worldwide. We support CPA firms in audit procedures for U.S.-based companies, ensuring full compliance and audit-readiness.</p>
+  </section>
+
+  <section id="services-summary">
+    <h2>Our Services</h2>
+    <div class="service-block">
+      <h3><a href="global-services.html" class="clickable-heading">Global Services</a></h3>
+      <p>We offer end-to-end accounting, bookkeeping, audit support, and financial reporting services to global clients. Our expertise helps CPA firms with accurate documentation and timely delivery in line with U.S. accounting standards. From transaction recording to management reports, we streamline your global financial operations.</p>
+      <a href="global-services.html">Learn more</a>
+    </div>
+    <div class="service-block">
+      <h3><a href="india-services.html" class="clickable-heading">India Services</a></h3>
+      <p>Our India-focused services include GST filings, TDS compliance, income tax preparation, ROC filings, and monthly MIS reporting. We serve startups, SMEs, and established businesses with reliable, on-time accounting solutions that ensure regulatory compliance and operational efficiency.</p>
+      <a href="india-services.html">Learn more</a>
+    </div>
   </section>
 
   <section id="founder">
@@ -114,13 +164,7 @@
     <img src="Dinesh Talreja Picture.jpeg" alt="Dinesh Talreja" class="founder-img" />
     <p>With a passion for precision and a vision to simplify global finance, I founded Global Accounting & Bookkeeping Services to empower businesses worldwide. Backed by deep expertise in accounting, compliance, and financial reporting, I bring years of experience helping organizations streamline their books. My goal is to deliver accurate, timely, and scalable solutions tailored to each client’s unique needs.</p>
     <p><strong>- Dinesh Talreja, Founder, CEO (Chartered Accountant, 2018)</strong></p>
-    <p>
-  <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank" style="text-decoration: none;">
-    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 24 24" fill="#0A66C2" style="vertical-align: middle;">
-      <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.07c.66-1.26 2.28-2.58 4.69-2.58 5.01 0 5.94 3.29 5.94 7.57V24h-5v-7.9c0-1.89-.03-4.32-2.63-4.32-2.63 0-3.03 2.05-3.03 4.17V24h-5V8z"/>
-    </svg>
-  </a>
-</p>
+    <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank">linkedin.com/in/ca-dinesh-talreja</a></p>
   </section>
 
   <section id="contact">
@@ -149,7 +193,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
   </footer>
 </body>
 </html>
