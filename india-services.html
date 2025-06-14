@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>India Services | Global Accounting</title>
   <style>
     body {
@@ -13,7 +13,9 @@
       color: #2e1a1a;
     }
     header {
-      background: #7a1f2b;
+      background-image: url('background');
+      background-size: cover;
+      background-position: center;
       color: #fff;
       padding: 40px 20px;
       text-align: center;
@@ -21,6 +23,9 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     nav {
       background: #5c121f;
@@ -48,17 +53,9 @@
     section h2 {
       color: #7a1f2b;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .service {
-      flex: 1 1 45%;
-      background: #ffe8e4;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
     }
     footer {
       background: #5c121f;
@@ -68,45 +65,37 @@
       margin-top: 40px;
     }
     @media (max-width: 768px) {
-      .services { flex-direction: column; }
+      nav { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>India Accounting Services</h1>
-    <p>Comprehensive Compliance & Bookkeeping Support Across India</p>
+    <h1>Global Accounting & Bookkeeping Services</h1>
+    <p>Your Trusted Partner for Indian Accounting & Compliance</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
-    <a href="india-services.html">India Services</a>
     <a href="global-services.html">Global Services</a>
+    <a href="india-services.html">India Services</a>
   </nav>
 
   <section>
-    <h2>Our Services in India</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Accounting Services</h3>
-        <p>End-to-end accounting solutions including preparation of financial statements, ledger maintenance, and expense tracking.</p>
-      </div>
-      <div class="service">
-        <h3>GST Services</h3>
-        <p>GST registration, monthly/quarterly return filing, reconciliation, and compliance advisory.</p>
-      </div>
-      <div class="service">
-        <h3>Income Tax Services</h3>
-        <p>Individual and corporate tax planning, return filing, TDS compliance, and tax audit assistance.</p>
-      </div>
-      <div class="service">
-        <h3>Company Services</h3>
-        <p>Company incorporation, ROC filings, statutory compliance, and advisory for startups and SMEs.</p>
-      </div>
-    </div>
+    <h2>India Services</h2>
+    <p>Our India-focused services cater to startups, SMEs, and large enterprises across industries. We help businesses stay compliant and financially transparent through end-to-end support in statutory filings and operational reporting.</p>
+    <ul>
+      <li>GST Return Filing (GSTR-1, GSTR-3B, etc.)</li>
+      <li>TDS Return Filing and Compliance</li>
+      <li>Income Tax Return Preparation and Filing</li>
+      <li>ROC (Registrar of Companies) Filings</li>
+      <li>Monthly MIS Reporting and Analysis</li>
+      <li>Accounting and Bookkeeping Services in Tally/Zoho/QuickBooks</li>
+    </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 <h1>Global Accounting & Bookkeeping Services</h1>. All rights reserved.</p>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
   </footer>
 </body>
 </html>
