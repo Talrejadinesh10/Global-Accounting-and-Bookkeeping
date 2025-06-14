@@ -8,8 +8,105 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
       background-color: #fff8f5;
       color: #2e1a1a;
     }
-    h
+    header {
+      background: #7a1f2b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #5c121f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    section h2 {
+      color: #7a1f2b;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .service {
+      flex: 1 1 45%;
+      background: #ffe8e4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    footer {
+      background: #5c121f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .services { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Global Services</h1>
+    <p>Comprehensive Accounting and Bookkeeping for International Clients</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="global-services.html">Global Services</a>
+    <a href="india-services.html">India Services</a>
+  </nav>
+
+  <section>
+    <h2>Our Global Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Accounting Services</h3>
+        <p>Accurate and timely accounting support in accordance with global standards, tailored to your business structure and compliance requirements.</p>
+      </div>
+      <div class="service">
+        <h3>Bookkeeping Services</h3>
+        <p>Virtual bookkeeping including transaction recording, bank reconciliation, accounts payable/receivable, and reporting.</p>
+      </div>
+      <div class="service">
+        <h3>Audit Support</h3>
+        <p>Assistance for CPA firms with audit testing, documentation, and preparation of audit evidence for U.S.-based companies.</p>
+      </div>
+      <div class="service">
+        <h3>Financial Reporting</h3>
+        <p>Preparation of management reports, financial statements, and cash flow analyses for international clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
+  </footer>
+</body>
+</html>
