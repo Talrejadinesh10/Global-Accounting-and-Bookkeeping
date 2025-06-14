@@ -8,11 +8,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       background-color: #fff8f5;
       color: #2e1a1a;
     }
     header {
-      background: #7a1f2b;
+      background-image: url('background');
+      background-size: cover;
+      background-position: center;
       color: #fff;
       padding: 40px 20px;
       text-align: center;
@@ -20,6 +23,9 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     nav {
       background: #5c121f;
@@ -47,18 +53,6 @@
     section h2 {
       color: #7a1f2b;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .service {
-      flex: 1 1 45%;
-      background: #ffe8e4;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
     footer {
       background: #5c121f;
       color: white;
@@ -67,14 +61,14 @@
       margin-top: 40px;
     }
     @media (max-width: 768px) {
-      .services { flex-direction: column; }
+      nav { flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Global Services</h1>
-    <p>Comprehensive Accounting and Bookkeeping for International Clients</p>
+    <h1>Global Accounting & Bookkeeping Services</h1>
+    <p>Your Trusted Partner for Global Accounting & Audit Assistance</p>
   </header>
 
   <nav>
@@ -84,29 +78,22 @@
   </nav>
 
   <section>
-    <h2>Our Global Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Accounting Services</h3>
-        <p>Accurate and timely accounting support in accordance with global standards, tailored to your business structure and compliance requirements.</p>
-      </div>
-      <div class="service">
-        <h3>Bookkeeping Services</h3>
-        <p>Virtual bookkeeping including transaction recording, bank reconciliation, accounts payable/receivable, and reporting.</p>
-      </div>
-      <div class="service">
-        <h3>Audit Support</h3>
-        <p>Assistance for CPA firms with audit testing, documentation, and preparation of audit evidence for U.S.-based companies.</p>
-      </div>
-      <div class="service">
-        <h3>Financial Reporting</h3>
-        <p>Preparation of management reports, financial statements, and cash flow analyses for international clients.</p>
-      </div>
-    </div>
+    <h2>Global Services</h2>
+    <p>Our global services are tailored to meet the accounting and financial needs of international businesses and CPA firms. We ensure accuracy, compliance, and timely delivery of services across borders.</p>
+    <ul>
+      <li>Bookkeeping and General Ledger Maintenance</li>
+      <li>Accounts Payable and Receivable Management</li>
+      <li>Bank Reconciliation and Cash Flow Reporting</li>
+      <li>Monthly, Quarterly & Annual Financial Statements</li>
+      <li>Audit Support for U.S. CPA Firms</li>
+      <li>GAAP Compliance and Reporting</li>
+      <li>Forecasting, Budgeting, and Management Reporting</li>
+    </ul>
+    <p>Our dedicated team works closely with global partners to deliver consistent, scalable, and cost-effective accounting support.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
   </footer>
 </body>
 </html>
