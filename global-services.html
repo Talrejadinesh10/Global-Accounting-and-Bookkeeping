@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>India Services | Global Accounting</title>
+  <title>Global Services | Global Accounting</title>
   <style>
     body {
       margin: 0;
@@ -12,36 +12,41 @@
       background-color: #f0f8ff;
       color: #2e1a1a;
     }
+
     header {
-      background-image: url('background');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
     }
-    header p {
-      font-size: 1.2rem;
-    }
+
     nav {
       background: #003366;
       color: white;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
+      padding: 12px 0;
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
+      font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -50,13 +55,54 @@
       border-radius: 8px;
       margin-top: 20px;
     }
+
     section h2 {
       color: #003366;
+      margin-bottom: 20px;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+
+    .service-tile {
+      margin-bottom: 25px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5faff;
     }
+
+    .service-tile h3 {
+      color: #003366;
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #002244;
+    }
+
     footer {
       background: #003366;
       color: white;
@@ -64,6 +110,7 @@
       padding: 20px;
       margin-top: 40px;
     }
+
     @media (max-width: 768px) {
       nav { flex-direction: column; }
     }
@@ -71,8 +118,8 @@
 </head>
 <body>
   <header>
-    <h1>Global Accounting & Bookkeeping Services</h1>
-    <p>Your Trusted Partner for Indian Accounting & Compliance</p>
+    <h1>Global Services</h1>
+    <p>Expert Offshore Accounting Solutions for International Clients & CPA Firms</p>
   </header>
 
   <nav>
@@ -83,20 +130,63 @@
 
   <section id="overview">
     <h2>Overview</h2>
-    <p>Our India-specific accounting and compliance services ensure that businesses meet regulatory obligations with confidence. From tax filings to detailed MIS reports, we simplify financial processes for startups and enterprises alike.</p>
+    <p>Our Global Services are built to support CPA firms and multinational clients with offshore accounting, audit support, and financial management. We offer scalable teams and automation-powered processes to ensure quality and timeliness.</p>
   </section>
 
   <section id="services">
-    <h2>India Services</h2>
-    <p>Our India-focused services cater to startups, SMEs, and large enterprises across industries. We help businesses stay compliant and financially transparent through end-to-end support in statutory filings and operational reporting.</p>
-    <ul>
-      <li>GST Return Filing (GSTR-1, GSTR-3B, etc.)</li>
-      <li>TDS Return Filing and Compliance</li>
-      <li>Income Tax Return Preparation and Filing</li>
-      <li>ROC (Registrar of Companies) Filings</li>
-      <li>Monthly MIS Reporting and Analysis</li>
-      <li>Accounting and Bookkeeping Services in Tally/Zoho/QuickBooks</li>
-    </ul>
+    <h2>Explore Our Global Services</h2>
+
+    <div class="service-tile">
+      <h3>Offshore Audit Support</h3>
+      <p>Assist CPA firms with audit documentation, work paper preparation, confirmations, and risk assessments. We follow U.S. GAAP and PCAOB guidelines ensuring readiness for annual audits.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Bookkeeping for U.S./UK Entities</h3>
+      <p>Daily and monthly bookkeeping using QuickBooks, Xero, and NetSuite for U.S., UK, and Canadian companies. We manage accounts receivable, payable, and bank reconciliations.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Payroll Processing</h3>
+      <p>End-to-end payroll services including pay computation, tax withholdings, and pay stub delivery in compliance with U.S. labor laws and timelines. Integration with Gusto, ADP, and other platforms.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Management Reporting</h3>
+      <p>Monthly and quarterly performance dashboards, P&L summaries, and KPIs tailored to client needs. We offer insights that support financial planning and investor reporting.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Accounting System Migration</h3>
+      <p>Migration support from legacy accounting systems to cloud platforms like Xero and QuickBooks Online. We ensure data integrity and minimal disruption during the transition.</p>
+    </div>
+
+    <div class="service-tile">
+      <h3>Year-End Finalization</h3>
+      <p>Preparation of year-end financials including journal adjustments, depreciation schedules, and closing entries. We work closely with external auditors to ensure smooth sign-off.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="org">Organisation Name</label>
+      <input type="text" id="org" name="organisation" required />
+
+      <label for="designation">Designation</label>
+      <input type="text" id="designation" name="designation" required />
+
+      <label for="phone">Country Code with Mobile Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer>
