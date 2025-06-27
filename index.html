@@ -49,26 +49,24 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #f0f8ff;
+      background-color: #f9fcff;
       color: #2e1a1a;
     }
     header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
       background-size: cover;
-      background-position: center;
       color: #fff;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 4px #000;
+      text-shadow: 2px 2px 6px #000;
     }
     header p {
-      font-size: 1.3rem;
-      text-shadow: 1px 1px 3px #000;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 4px #000;
     }
     nav {
       background: #003366;
@@ -76,6 +74,7 @@
       display: flex;
       justify-content: center;
       padding: 12px 0;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -90,9 +89,6 @@
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
-      background: white;
-      border-radius: 8px;
-      margin-top: 20px;
     }
     section h2 {
       color: #003366;
@@ -117,13 +113,16 @@
       border-radius: 8px;
       margin-bottom: 20px;
     }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
-    }
-    label {
-      font-weight: bold;
     }
     input, textarea {
       padding: 10px;
@@ -146,11 +145,13 @@
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
     }
     .cta {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
+      background-color: #e6f2ff;
+      padding: 40px 20px;
+      border-radius: 8px;
     }
     .cta a {
       background: #003366;
@@ -171,7 +172,7 @@
 <body>
   <header>
     <h1>Global Accounting & Bookkeeping Services</h1>
-    <p>Your Trusted Partner in Global & India Accounting Services</p>
+    <p>Expert Finance, Audit & Compliance Support Across Borders</p>
   </header>
 
   <nav>
@@ -181,51 +182,51 @@
   </nav>
 
   <section id="overview">
-    <h2>Overview</h2>
-    <p>We are a trusted accounting and bookkeeping partner for clients across the globe. With a focus on accuracy, compliance, and transparency, we offer tailored financial solutions that support businesses in both international and Indian markets. Our goal is to enable informed decision-making through expert insights and timely reporting.</p>
+    <h2>Welcome to Global Accounting</h2>
+    <p>We are a globally-driven accounting firm helping businesses thrive with seamless financial operations. Our solutions are tailored for startups, CPA firms, and enterprises looking for accurate, timely, and scalable services — with deep expertise across global and Indian compliance landscapes.</p>
   </section>
 
   <section id="services">
-    <h2>Our Services</h2>
+    <h2>Our Core Services</h2>
 
     <div class="service-tile">
-      <h3><a href="global-services.html">Global Services</a></h3>
-      <p>We specialize in providing offshore accounting and audit support for CPA firms and multinational companies. From preparing audit schedules and reconciliations to delivering financial statements in QuickBooks and Xero, our team ensures international standards are met. We help streamline processes, improve accuracy, and reduce operational costs for global clients.</p>
+      <h3><a href="global-services.html">Global Accounting Solutions</a></h3>
+      <p>End-to-end offshore support in audit, bookkeeping, reconciliation, and reporting. Expert delivery in QuickBooks, Xero, NetSuite, and IFRS frameworks.</p>
     </div>
 
     <div class="service-tile">
-      <h3><a href="india-services.html">India Services</a></h3>
-      <p>Our India-focused services include bookkeeping, GST filing, TDS compliance, payroll processing, MCA compliance, and more. We support startups, MSMEs, and established firms with end-to-end financial management. Our deep understanding of Indian regulations ensures you stay compliant while focusing on business growth.</p>
+      <h3><a href="india-services.html">India Tax & Compliance</a></h3>
+      <p>GST filing, TDS returns, payroll, ROC compliance — all delivered by local experts. Ensure full MCA and Income Tax compliance, effortlessly.</p>
     </div>
   </section>
 
   <section id="why-us">
-    <h2>Why Choose Us</h2>
+    <h2>Why Partner With Us</h2>
     <ul>
-      <li>Led by an experienced Chartered Accountant</li>
-      <li>Audit-ready and scalable financial services</li>
-      <li>Support for U.S. GAAP, Indian compliance, and IFRS</li>
-      <li>Cost-effective outsourcing for global clients</li>
+      <li>Led by a Chartered Accountant with global delivery experience</li>
+      <li>Trusted support for CPA firms, startups & finance teams worldwide</li>
+      <li>Compliant with U.S. GAAP, Indian Accounting Standards, and IFRS</li>
+      <li>Cost-effective, secure, and audit-ready financial outsourcing</li>
     </ul>
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>Global Accounting & Bookkeeping Services is a team of professionals committed to delivering reliable, scalable, and accurate financial services. We are led by a Chartered Accountant and have a growing reputation for our personalized approach and audit-ready financial reporting capabilities.</p>
+    <h2>About Our Firm</h2>
+    <p>Founded with the mission to provide world-class accounting support across borders, our team brings clarity, control, and compliance to your financial operations. With robust systems and personalized service, we are redefining outsourced finance for global businesses.</p>
   </section>
 
   <section id="founder">
-    <h2>About the Founder</h2>
+    <h2>Meet the Founder</h2>
     <img src="Dinesh Talreja Picture.jpeg" alt="Dinesh Talreja" class="founder-img" />
-    <p>With a passion for precision and a vision to simplify global finance, I founded Global Accounting & Bookkeeping Services to empower businesses worldwide. Backed by deep expertise in accounting, compliance, and financial reporting, I bring years of experience helping organizations streamline their books.</p>
-    <p><strong>- Dinesh Talreja, Founder, CEO (Chartered Accountant, 2018)</strong></p>
+    <p>I’m Dinesh Talreja, a Chartered Accountant with a passion for empowering businesses through efficient finance operations. With experience in audit, compliance, and global reporting, I launched this firm to bridge the accounting gap for companies worldwide.</p>
+    <p><strong>– Dinesh Talreja, Founder & CEO</strong></p>
     <p>Connect: <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank">LinkedIn</a></p>
   </section>
 
   <section id="cta" class="cta">
-    <h2>Start Today</h2>
-    <p>Let’s take your finance operations global — <strong>Book a Free Consultation Now!</strong></p>
-    <a href="#contact">Request Free Consultation</a>
+    <h2>Let's Get Started</h2>
+    <p>Book a <strong>free consultation</strong> and discover how we can streamline your accounting function.</p>
+    <a href="#contact">Schedule Now</a>
   </section>
 
   <section id="contact">
@@ -234,16 +235,16 @@
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
-      <label for="org">Organisation Name</label>
+      <label for="org">Organisation</label>
       <input type="text" id="org" name="organisation" required />
 
       <label for="designation">Designation</label>
       <input type="text" id="designation" name="designation" required />
 
-      <label for="phone">Country Code with Mobile Number</label>
+      <label for="phone">Phone (incl. Country Code)</label>
       <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
 
-      <label for="email">Email Address</label>
+      <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
 
       <button type="submit">Submit</button>
@@ -251,7 +252,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
   </footer>
 </body>
 </html>
