@@ -24,143 +24,33 @@
   <meta property="twitter:description" content="International audit & bookkeeping support tailored for CPA firms and global enterprises.">
   <meta property="twitter:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Offshore Accounting & Audit Support",
-    "provider": {
-      "@type": "Organization",
-      "name": "Global Accounting & Bookkeeping Services",
-      "url": "https://globalaccountingandbookkeeping.com.mx"
-    },
-    "areaServed": [
-      { "@type": "Country", "name": "United States" },
-      { "@type": "Country", "name": "United Kingdom" },
-      { "@type": "Country", "name": "Canada" },
-      { "@type": "Country", "name": "Australia" }
-    ]
-  }
-  </script>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Segoe+UI" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fcff;
-      color: #2e1a1a;
-    }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      padding: 70px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 4px #000;
-    }
-    header p {
-      font-size: 1.3rem;
-      text-shadow: 1px 1px 3px #000;
-    }
-    nav {
-      background: #003366;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      color: #003366;
-      margin-bottom: 20px;
-    }
-    .service-tile {
-      margin-bottom: 25px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f5faff;
-    }
-    .service-tile h3 i {
-      color: #003366;
-      margin-right: 10px;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-      background-color: #e6f2ff;
-      padding: 40px 20px;
-      border-radius: 8px;
-    }
-    .cta a {
-      background: #003366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta a:hover {
-      background: #001f3f;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    label {
-      font-weight: bold;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #002244;
-    }
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      nav { flex-direction: column; }
-    }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9fcff; color: #2e1a1a; }
+    header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg'); background-size: cover; background-position: center; color: #fff; padding: 70px 20px; text-align: center; }
+    header h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 1px 1px 4px #000; }
+    header p { font-size: 1.3rem; text-shadow: 1px 1px 3px #000; }
+    nav { background: #003366; color: white; display: flex; justify-content: center; padding: 12px 0; flex-wrap: wrap; }
+    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    section h2 { color: #003366; margin-bottom: 20px; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .service-tile { padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f5faff; }
+    .service-tile h3 i { color: #003366; margin-right: 10px; }
+    .cta { text-align: center; margin-top: 30px; background-color: #e6f2ff; padding: 40px 20px; border-radius: 8px; }
+    .cta a { background: #003366; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .cta a:hover { background: #001f3f; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    label { font-weight: bold; }
+    input, select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px 20px; background-color: #003366; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #002244; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    @media (max-width: 768px) { nav { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -180,61 +70,29 @@
     <p>We provide global accounting services designed for scalability, compliance, and operational efficiency. Whether you're a CPA firm or a multinational startup, our financial experts deliver cost-effective, audit-ready results tailored to your region and industry.</p>
   </section>
 
-  <section id="services">
-    <h2>Our Global Offerings</h2>
-
-    <!-- Existing Services -->
-    <div class="service-tile">
-      <h3><i class="fas fa-shield-alt"></i> Offshore Audit Support</h3>
-      <p>Workpaper preparation, confirmations, testing, risk assessment, and documentation — fully aligned with U.S. GAAP, IFRS, and PCAOB frameworks.</p>
+  <section id="services-cpa">
+    <h2>Services for CPA Firms</h2>
+    <div class="service-grid">
+      <div class="service-tile"><h3><i class="fas fa-user-tie"></i> Accountant</h3><p>Dedicated CPAs for compliance & reporting.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-book"></i> Bookkeeper</h3><p>Maintain accurate ledgers and accounts.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-brain"></i> Fractional CFO</h3><p>Strategic financial planning and guidance.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-file-invoice-dollar"></i> Tax Preparer</h3><p>Ensure accurate and timely filings.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-chart-line"></i> Staff Accountant</h3><p>Support for core finance operations.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-shield-alt"></i> Audit Support Staff</h3><p>Prepare and organize audit materials.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-calculator"></i> QuickBooks Expert</h3><p>Customize and optimize QBO processes.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-search-dollar"></i> Tax Reviewer</h3><p>Double-check tax accuracy and savings.</p></div>
     </div>
+  </section>
 
-    <div class="service-tile">
-      <h3><i class="fas fa-book"></i> Bookkeeping for U.S./UK Entities</h3>
-      <p>Daily/Monthly bookkeeping using QBO, Xero & NetSuite — managing reconciliations, AP/AR, payroll entries, and period closes.</p>
+  <section id="services-business">
+    <h2>Services for Business Owners</h2>
+    <div class="service-grid">
+      <div class="service-tile"><h3><i class="fas fa-file-invoice"></i> AR/AP Billing Executive</h3><p>Manage receivables and payables smoothly.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-users-cog"></i> Account Supervisor</h3><p>Lead teams and manage reporting cycles.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-money-check-alt"></i> Payroll Expert</h3><p>Streamlined payroll for compliance.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-globe"></i> Virtual CFO</h3><p>Get remote financial strategy expertise.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-headset"></i> Virtual Assistant</h3><p>Efficient admin and client coordination.</p></div>
     </div>
-
-    <div class="service-tile">
-      <h3><i class="fas fa-money-check-alt"></i> Payroll Processing (U.S., UK, Canada)</h3>
-      <p>Cross-border payroll setup, pay stub generation, tax submissions, and third-party integration with ADP, Gusto, and others.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3><i class="fas fa-chart-line"></i> Management & KPI Reporting</h3>
-      <p>Financial dashboards, investor presentations, cash flow summaries, and real-time performance insights.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3><i class="fas fa-cloud-upload-alt"></i> Cloud Accounting Migration</h3>
-      <p>Transition legacy systems to QuickBooks, Xero, or NetSuite. Includes chart setup, mapping, cleanup, and verification.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3><i class="fas fa-calendar-check"></i> Year-End Close & Adjustments</h3>
-      <p>Final books with adjusting entries, tax accruals, depreciation, and audit file readiness for hassle-free review.</p>
-    </div>
-
-    <!-- Group: CPA Firms -->
-    <h3>Services for CPA Firms</h3>
-
-    <div class="service-tile"><h3><i class="fas fa-user-tie"></i> Accountant</h3><p>Hire dedicated accountants for your CPA.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-book"></i> Bookkeeper</h3><p>Manage clients’ books with trained staff.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-brain"></i> Fractional CFO</h3><p>Strategic CFO support for growing firms.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-file-invoice-dollar"></i> Tax Preparer</h3><p>Tax filing accuracy and efficiency.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-chart-line"></i> Staff Accountant</h3><p>Scale operations with flexible resources.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-shield-alt"></i> Audit Support Staff</h3><p>End-to-end audit prep and testing.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-calculator"></i> QuickBooks Expert</h3><p>Setup, troubleshoot and optimize QBO.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-search-dollar"></i> Tax Reviewer</h3><p>File reviews to maximize compliance.</p></div>
-
-    <!-- Group: Business Owners -->
-    <h3>Services for Business Owners</h3>
-
-    <div class="service-tile"><h3><i class="fas fa-file-invoice"></i> AR/AP Billing Executive</h3><p>Streamline invoices and payment cycles.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-users-cog"></i> Account Supervisor</h3><p>Finance team oversight and mentoring.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-money-check-alt"></i> Payroll Expert</h3><p>Fully-managed payroll services.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-globe"></i> Virtual CFO</h3><p>Strategic planning with virtual CFOs.</p></div>
-    <div class="service-tile"><h3><i class="fas fa-headset"></i> Virtual Assistant</h3><p>Admin support from skilled offshore VA.</p></div>
-
   </section>
 
   <section class="cta">
@@ -249,17 +107,29 @@
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
-      <label for="org">Organisation Name</label>
-      <input type="text" id="org" name="organisation" required />
-
-      <label for="designation">Designation</label>
-      <input type="text" id="designation" name="designation" required />
-
-      <label for="phone">Phone (with Country Code)</label>
-      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required />
-
-      <label for="email">Email Address</label>
+      <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="service">Service Required</label>
+      <select id="service" name="service" required>
+        <option value="">Select a Service</option>
+        <option>Accountant</option>
+        <option>Bookkeeper</option>
+        <option>Fractional CFO</option>
+        <option>Tax Preparer</option>
+        <option>Staff Accountant</option>
+        <option>Audit Support Staff</option>
+        <option>QuickBooks Expert</option>
+        <option>Tax Reviewer</option>
+        <option>AR/AP Billing Executive</option>
+        <option>Account Supervisor</option>
+        <option>Payroll Expert</option>
+        <option>Virtual CFO</option>
+        <option>Virtual Assistant</option>
+      </select>
 
       <button type="submit">Submit</button>
     </form>
