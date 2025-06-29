@@ -3,27 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>India Accounting & Compliance Services | Global Accounting</title>
+  <title>Global Accounting Services | Offshore Audit & Bookkeeping</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f8ff;
+      background-color: #f9fcff;
       color: #2e1a1a;
-      line-height: 1.6;
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
     header h1 {
       font-size: 2.8rem;
       margin-bottom: 10px;
       text-shadow: 1px 1px 4px #000;
+    }
+    header p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 3px #000;
     }
     nav {
       background: #003366;
@@ -32,6 +37,7 @@
       justify-content: center;
       padding: 12px 0;
       flex-wrap: wrap;
+      position: relative;
     }
     nav a {
       color: white;
@@ -45,10 +51,11 @@
       padding: 6px 12px;
       border-radius: 4px;
     }
-    nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .dropdown {
       position: relative;
-      display: inline-block;
     }
     .dropdown-content {
       display: none;
@@ -65,9 +72,6 @@
       display: block;
       text-align: left;
     }
-    .dropdown-content a:hover {
-      background-color: #001f3f;
-    }
     .dropdown:hover .dropdown-content {
       display: block;
     }
@@ -75,9 +79,6 @@
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
-      background: white;
-      border-radius: 8px;
-      margin-top: 20px;
     }
     section h2 {
       color: #003366;
@@ -89,18 +90,47 @@
       gap: 20px;
     }
     .service-tile {
+      background: #f5faff;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      background-color: #f5faff;
     }
     .service-tile h3 {
-      color: #003366;
       margin-top: 0;
+      color: #003366;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 12px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #002244;
     }
     .cta {
       text-align: center;
-      margin-top: 40px;
+      background-color: #e6f2ff;
+      padding: 40px 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
     }
     .cta a {
       background: #003366;
@@ -110,26 +140,9 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .cta a:hover { background: #001f3f; }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .cta a:hover {
+      background: #001f3f;
     }
-    input, textarea, select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover { background-color: #002244; }
     footer {
       background: #003366;
       color: white;
@@ -138,14 +151,19 @@
       margin-top: 40px;
     }
     @media (max-width: 768px) {
-      nav { flex-direction: column; }
+      nav {
+        flex-direction: column;
+      }
+      .dropdown-content {
+        position: static;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>India Accounting & Compliance Services</h1>
-    <p>End-to-End Financial Support for Indian Startups & Enterprises</p>
+    <h1>Global Accounting Services</h1>
+    <p>Efficient, Audit-Ready, and Scalable Offshore Finance Support</p>
   </header>
 
   <nav>
@@ -154,13 +172,13 @@
     <div class="dropdown">
       <a href="#">Global Services</a>
       <div class="dropdown-content">
-        <a href="global-services.html#services-cpa">For CPA Firms</a>
-        <a href="global-services.html#services-business">For Business Owners</a>
+        <a href="#services-cpa">For CPA Firms</a>
+        <a href="#services-business">For Business Owners</a>
       </div>
     </div>
     <a href="india-services.html">India Services</a>
     <a href="careers.html">Careers</a>
-    <a href="#contact">Contact Us</a>
+    <a href="index.html#contact">Contact Us</a>
     <a href="book-a-call.html" class="book-call">Book a Call</a>
   </nav>
 
