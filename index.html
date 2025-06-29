@@ -75,16 +75,49 @@
       justify-content: center;
       padding: 12px 0;
       flex-wrap: wrap;
+      position: relative;
     }
     nav a {
       color: white;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
     }
     nav a:hover {
       text-decoration: underline;
     }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #003366;
+      min-width: 180px;
+      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #001f3f;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -184,6 +217,7 @@
     }
     @media (max-width: 768px) {
       nav { flex-direction: column; }
+      .dropdown-content { position: static; }
     }
   </style>
 </head>
@@ -195,22 +229,19 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="#global-options">Global Services</a>
+    <div class="dropdown">
+      <a href="#">Global Services</a>
+      <div class="dropdown-content">
+        <a href="global-services.html#cpa-firm">For CPA Firms</a>
+        <a href="global-services.html#business-owners">For Business Owners</a>
+      </div>
+    </div>
     <a href="india-services.html">India Services</a>
   </nav>
 
   <section id="overview">
     <h2>Welcome to Global Accounting</h2>
     <p>We are a globally-driven accounting firm helping businesses thrive with seamless financial operations. Our solutions are tailored for startups, CPA firms, and enterprises looking for accurate, timely, and scalable services — with deep expertise across global and Indian compliance landscapes.</p>
-  </section>
-
-  <section id="global-options">
-    <h2>Explore Global Services</h2>
-    <p>Please choose your path:</p>
-    <div class="button-group">
-      <a href="global-services.html#cpa-firm">For CPA Firms</a>
-      <a href="global-services.html#business-owners">For Business Owners</a>
-    </div>
   </section>
 
   <section id="services">
@@ -254,39 +285,39 @@
     <a href="#contact">Schedule Now</a>
   </section>
 
- <section id="contact">
-  <h2>Contact Us</h2>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
 
-    <label for="service">Service Required</label>
-    <select id="service" name="service" required>
-      <option value="">Select a Service</option>
-      <option>Accountant</option>
-      <option>Bookkeeper</option>
-      <option>Fractional CFO</option>
-      <option>Tax Preparer</option>
-      <option>Staff Accountant</option>
-      <option>Audit Support Staff</option>
-      <option>QuickBooks Expert</option>
-      <option>Tax Reviewer</option>
-      <option>AR/AP Billing Executive</option>
-      <option>Account Supervisor</option>
-      <option>Payroll Expert</option>
-      <option>Virtual CFO</option>
-      <option>Virtual Assistant</option>
-    </select>
+      <label for="service">Service Required</label>
+      <select id="service" name="service" required>
+        <option value="">Select a Service</option>
+        <option>Accountant</option>
+        <option>Bookkeeper</option>
+        <option>Fractional CFO</option>
+        <option>Tax Preparer</option>
+        <option>Staff Accountant</option>
+        <option>Audit Support Staff</option>
+        <option>QuickBooks Expert</option>
+        <option>Tax Reviewer</option>
+        <option>AR/AP Billing Executive</option>
+        <option>Account Supervisor</option>
+        <option>Payroll Expert</option>
+        <option>Virtual CFO</option>
+        <option>Virtual Assistant</option>
+      </select>
 
-    <button type="submit">Submit</button>
-  </form>
-</section>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
