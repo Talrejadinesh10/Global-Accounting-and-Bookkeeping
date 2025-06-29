@@ -108,6 +108,24 @@
     .service-tile h3 a:hover {
       text-decoration: underline;
     }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .button-group a {
+      padding: 12px 24px;
+      background-color: #003366;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button-group a:hover {
+      background-color: #001f3f;
+    }
     .founder-img {
       max-width: 200px;
       border-radius: 8px;
@@ -124,7 +142,7 @@
       flex-direction: column;
       gap: 15px;
     }
-    input, textarea {
+    input, select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -177,7 +195,7 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="global-services.html">Global Services</a>
+    <a href="#global-options">Global Services</a>
     <a href="india-services.html">India Services</a>
   </nav>
 
@@ -186,14 +204,21 @@
     <p>We are a globally-driven accounting firm helping businesses thrive with seamless financial operations. Our solutions are tailored for startups, CPA firms, and enterprises looking for accurate, timely, and scalable services — with deep expertise across global and Indian compliance landscapes.</p>
   </section>
 
+  <section id="global-options">
+    <h2>Explore Global Services</h2>
+    <p>Please choose your path:</p>
+    <div class="button-group">
+      <a href="global-services.html#cpa-firm">For CPA Firms</a>
+      <a href="global-services.html#business-owners">For Business Owners</a>
+    </div>
+  </section>
+
   <section id="services">
     <h2>Our Core Services</h2>
-
     <div class="service-tile">
       <h3><a href="global-services.html">Global Accounting Solutions</a></h3>
       <p>End-to-end offshore support in audit, bookkeeping, reconciliation, and reporting. Expert delivery in QuickBooks, Xero, NetSuite, and IFRS frameworks.</p>
     </div>
-
     <div class="service-tile">
       <h3><a href="india-services.html">India Tax & Compliance</a></h3>
       <p>GST filing, TDS returns, payroll, ROC compliance — all delivered by local experts. Ensure full MCA and Income Tax compliance, effortlessly.</p>
