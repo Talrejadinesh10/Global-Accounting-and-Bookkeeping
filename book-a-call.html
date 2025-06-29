@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Call | Global Accounting</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9fcff; color: #2e1a1a; }
+    header, footer { background: #003366; color: white; text-align: center; padding: 20px; }
+    nav { background: #003366; padding: 12px 0; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .section { padding: 40px 20px; max-width: 600px; margin: auto; text-align: center; }
+    form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #003366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #001f3f; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book a Free Consultation Call</h1>
+    <p>Connect with our accounting experts today</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="global-services.html">Global Services</a>
+    <a href="india-services.html">India Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="book-a-call.html">Book a Call</a>
+  </nav>
+
+  <section class="section">
+    <h2>Schedule Your Session</h2>
+    <p>Please use the form below to request a consultation. We'll follow up within 24 hours.</p>
+    <form action="https://forms.gle/YOUR_GOOGLE_FORM" method="get" target="_blank">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" placeholder="Brief description of your needs..." rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services</p>
+  </footer>
+</body>
+</html>
