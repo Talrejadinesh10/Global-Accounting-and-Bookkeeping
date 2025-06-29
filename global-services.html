@@ -24,33 +24,169 @@
   <meta property="twitter:description" content="International audit & bookkeeping support tailored for CPA firms and global enterprises.">
   <meta property="twitter:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
 
-  <!-- Font Awesome for Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9fcff; color: #2e1a1a; }
-    header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg'); background-size: cover; background-position: center; color: #fff; padding: 70px 20px; text-align: center; }
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 1px 1px 4px #000; }
-    header p { font-size: 1.3rem; text-shadow: 1px 1px 3px #000; }
-    nav { background: #003366; color: white; display: flex; justify-content: center; padding: 12px 0; flex-wrap: wrap; }
-    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    section h2 { color: #003366; margin-bottom: 20px; }
-    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .service-tile { padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f5faff; }
-    .service-tile h3 i { color: #003366; margin-right: 10px; }
-    .cta { text-align: center; margin-top: 30px; background-color: #e6f2ff; padding: 40px 20px; border-radius: 8px; }
-    .cta a { background: #003366; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
-    .cta a:hover { background: #001f3f; }
-    form { display: flex; flex-direction: column; gap: 15px; }
-    label { font-weight: bold; }
-    input, select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-    button { padding: 10px 20px; background-color: #003366; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover { background-color: #002244; }
-    footer { background: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    @media (max-width: 768px) { nav { flex-direction: column; } }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fcff;
+      color: #2e1a1a;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    header p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+    nav {
+      background: #003366;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #003366;
+      min-width: 180px;
+      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #001f3f;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .service-tile {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5faff;
+    }
+    .service-tile h3 i {
+      color: #003366;
+      margin-right: 10px;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+      background-color: #e6f2ff;
+      padding: 40px 20px;
+      border-radius: 8px;
+    }
+    .cta a {
+      background: #003366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background: #001f3f;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #002244;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      .dropdown-content {
+        position: static;
+      }
+    }
   </style>
 </head>
 <body>
@@ -61,7 +197,13 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="global-services.html">Global Services</a>
+    <div class="dropdown">
+      <a href="#">Global Services</a>
+      <div class="dropdown-content">
+        <a href="#services-cpa">For CPA Firms</a>
+        <a href="#services-business">For Business Owners</a>
+      </div>
+    </div>
     <a href="india-services.html">India Services</a>
   </nav>
 
