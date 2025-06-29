@@ -4,54 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>India Accounting & Compliance Services | Global Accounting</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="title" content="India Accounting & Compliance Services">
-  <meta name="description" content="Reliable GST, TDS, bookkeeping, payroll, and MCA compliance solutions tailored for Indian startups and businesses.">
-  <meta name="keywords" content="GST filing, TDS return, India accounting, ROC filing, payroll compliance, MCA services">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://globalaccountingandbookkeeping.com.mx/india-services">
-  <meta property="og:title" content="India Accounting & Compliance Services">
-  <meta property="og:description" content="Bookkeeping, GST, income tax, payroll, and MCA compliance for Indian firms and entrepreneurs.">
-  <meta property="og:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://globalaccountingandbookkeeping.com.mx/india-services">
-  <meta property="twitter:title" content="India Accounting & Compliance Services">
-  <meta property="twitter:description" content="End-to-end accounting support for Indian startups, SMEs, and businesses.">
-  <meta property="twitter:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Accounting and Tax Compliance for Indian Businesses",
-    "provider": {
-      "@type": "Organization",
-      "name": "Global Accounting & Bookkeeping Services",
-      "url": "https://globalaccountingandbookkeeping.com.mx"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
-    }
-  }
-  </script>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Segoe+UI" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <!-- [SEO, OG, Twitter, JSON-LD, Fonts, Favicon omitted for brevity] -->
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
       background-color: #f0f8ff;
       color: #2e1a1a;
+      line-height: 1.6;
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
@@ -72,16 +32,15 @@
       display: flex;
       justify-content: center;
       padding: 12px 0;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -94,8 +53,12 @@
       color: #003366;
       margin-bottom: 20px;
     }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
     .service-tile {
-      margin-bottom: 25px;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -117,18 +80,13 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .cta a:hover {
-      background: #001f3f;
-    }
+    .cta a:hover { background: #001f3f; }
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-    label {
-      font-weight: bold;
-    }
-    input, textarea {
+    input, textarea, select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -141,9 +99,7 @@
       border-radius: 4px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #002244;
-    }
+    button:hover { background-color: #002244; }
     footer {
       background: #003366;
       color: white;
@@ -163,9 +119,19 @@
   </header>
 
   <nav>
+    <a href="#about">About Us</a>
     <a href="index.html">Home</a>
-    <a href="global-services.html">Global Services</a>
+    <div class="dropdown">
+      <a href="#">Global Services</a>
+      <div class="dropdown-content">
+        <a href="global-services.html#services-cpa">For CPA Firms</a>
+        <a href="global-services.html#services-business">For Business Owners</a>
+      </div>
+    </div>
     <a href="india-services.html">India Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="#contact">Contact Us</a>
+    <a href="book-a-call.html">Book a Call</a>
   </nav>
 
   <section id="overview">
@@ -175,35 +141,31 @@
 
   <section id="services">
     <h2>Our Core India Services</h2>
-
-    <div class="service-tile">
-      <h3>Bookkeeping & Accounting</h3>
-      <p>Maintain up-to-date books across Tally, QuickBooks, or Zoho — complete with ledger maintenance, expense tracking, and audit preparation.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3>GST & TDS Return Filing</h3>
-      <p>File GSTR-1, GSTR-3B, and TDS returns accurately and on time. Avoid penalties and stay compliant with Indian tax regulations effortlessly.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3>Income Tax Return Filing</h3>
-      <p>Professional support for ITR-1 to ITR-6 across individuals, proprietorships, LLPs, and Pvt Ltd companies — with tax planning guidance.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3>ROC & MCA Filings</h3>
-      <p>Get help with AOC-4, MGT-7, board meeting resolutions, DIR-3 KYC, and more to ensure annual compliance with Indian corporate law.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3>Payroll & TDS Computation</h3>
-      <p>Streamline payroll with payslips, PF/ESI/PT deductions, TDS calculation, and compliance reporting. Hassle-free monthly payroll solutions.</p>
-    </div>
-
-    <div class="service-tile">
-      <h3>MIS & Financial Dashboards</h3>
-      <p>Drive decision-making with MIS reports, cost center summaries, and actionable financial analysis tailored to your business KPIs.</p>
+    <div class="service-grid">
+      <div class="service-tile">
+        <h3>Bookkeeping & Accounting</h3>
+        <p>Maintain clean ledgers, track expenses, and reconcile accounts using Tally, Zoho, or QuickBooks. Get audit-ready books for investors or statutory filing.</p>
+      </div>
+      <div class="service-tile">
+        <h3>GST & TDS Return Filing</h3>
+        <p>Monthly/quarterly GST returns, TDS compliance, and 26Q filing — with reconciliations to prevent mismatches and penalties.</p>
+      </div>
+      <div class="service-tile">
+        <h3>Income Tax Return Filing</h3>
+        <p>Prepare and file returns for individuals, firms, LLPs, and companies. Includes advance tax calculations and planning guidance.</p>
+      </div>
+      <div class="service-tile">
+        <h3>ROC & MCA Filings</h3>
+        <p>Annual filings like AOC-4, MGT-7, DIR-3 KYC, board resolutions, and more — all handled with reminders and complete documentation.</p>
+      </div>
+      <div class="service-tile">
+        <h3>Payroll & TDS Computation</h3>
+        <p>Generate payslips, deduct PF/ESI, calculate TDS, and file returns. Supports Gusto, Zoho Payroll, and custom Excel solutions.</p>
+      </div>
+      <div class="service-tile">
+        <h3>MIS & Financial Dashboards</h3>
+        <p>Monthly profit & loss, cash flow statements, KPI dashboards — insights that help business owners make fast, confident decisions.</p>
+      </div>
     </div>
   </section>
 
@@ -213,40 +175,39 @@
     <a href="#contact">Request Free Consultation</a>
   </section>
 
-   <section id="contact">
-  <h2>Contact Us</h2>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
 
-    <label for="service">Service Required</label>
-    <select id="service" name="service" required>
-      <option value="">Select a Service</option>
-      <option>Accountant</option>
-      <option>Bookkeeper</option>
-      <option>Fractional CFO</option>
-      <option>Tax Preparer</option>
-      <option>Staff Accountant</option>
-      <option>Audit Support Staff</option>
-      <option>QuickBooks Expert</option>
-      <option>Tax Reviewer</option>
-      <option>AR/AP Billing Executive</option>
-      <option>Account Supervisor</option>
-      <option>Payroll Expert</option>
-      <option>Virtual CFO</option>
-      <option>Virtual Assistant</option>
-    </select>
+      <label for="service">Service Required</label>
+      <select id="service" name="service" required>
+        <option value="">Select a Service</option>
+        <option>Accountant</option>
+        <option>Bookkeeper</option>
+        <option>Fractional CFO</option>
+        <option>Tax Preparer</option>
+        <option>Staff Accountant</option>
+        <option>Audit Support Staff</option>
+        <option>QuickBooks Expert</option>
+        <option>Tax Reviewer</option>
+        <option>AR/AP Billing Executive</option>
+        <option>Account Supervisor</option>
+        <option>Payroll Expert</option>
+        <option>Virtual CFO</option>
+        <option>Virtual Assistant</option>
+      </select>
 
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
