@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>India Accounting & Compliance Services | Global Accounting</title>
-  <!-- [SEO, OG, Twitter, JSON-LD, Fonts, Favicon omitted for brevity] -->
   <style>
     body {
       margin: 0;
@@ -40,7 +39,38 @@
       text-decoration: none;
       font-weight: bold;
     }
+    nav a.book-call {
+      background-color: yellow;
+      color: black;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
     nav a:hover { text-decoration: underline; }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #003366;
+      min-width: 180px;
+      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #001f3f;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -131,7 +161,7 @@
     <a href="india-services.html">India Services</a>
     <a href="careers.html">Careers</a>
     <a href="#contact">Contact Us</a>
-    <a href="book-a-call.html">Book a Call</a>
+    <a href="book-a-call.html" class="book-call">Book a Call</a>
   </nav>
 
   <section id="overview">
