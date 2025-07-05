@@ -2,123 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Careers | Global Accounting & Bookkeeping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | Global Accounting Services</title>
+
+  <meta name="title" content="Careers at Global Accounting Services">
+  <meta name="description" content="Join our team of offshore accounting professionals. Explore current openings in bookkeeping, tax, audit, and financial services.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fcff;
       color: #2e1a1a;
-      background: #f9fcff;
-      line-height: 1.6;
     }
     header {
-      background: #003366;
-      color: white;
-      padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 80px 20px;
       text-align: center;
     }
-    header h1 { font-size: 2rem; margin-bottom: 10px; }
-    header p { font-size: 1.1rem; opacity: 0.9; }
-
     nav {
       background: #003366;
-      padding: 10px 0;
+      color: white;
       display: flex;
       justify-content: center;
+      padding: 12px 0;
       flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      padding: 5px 10px;
     }
-    nav a.book-call {
-      background-color: yellow;
-      color: black;
-      padding: 6px 12px;
-      border-radius: 4px;
+    nav a.active {
+      border-bottom: 2px solid #ffcc00;
     }
-    nav a:hover { background: rgba(255,255,255,0.1); }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .jobs-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .highlight-call-link {
+      background-color: #ffcc00;
+      color: #003366 !important;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-left: 10px;
     }
-    .job-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 20px;
+    .highlight-call-link:hover {
+      background-color: #ffc107;
     }
-    .job-card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+    .highlight-hire {
+      background-color: #fff;
       color: #003366;
+      padding: 3px 8px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-left: 4px;
     }
-    .job-card p {
-      margin-bottom: 15px;
-      font-size: 0.95rem;
-      opacity: 0.9;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .apply-btn {
-      display: inline-block;
-      padding: 10px 16px;
+    section h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    .job-tile {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f5faff;
+      margin-bottom: 20px;
+    }
+    footer {
       background: #003366;
       color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .apply-btn:hover {
-      background: #002244;
-    }
-
-    footer {
       text-align: center;
-      padding: 30px 0;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #555;
+      padding: 20px;
+    }
+    .floating-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffcc00;
+      color: #003366;
+      padding: 12px 18px;
+      border-radius: 40px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1001;
+    }
+    .floating-cta:hover {
+      background: #ffc107;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Be Part Of #TheGlobalAccounting</h1>
-    <p>Join our mission to redefine cross-border finance support for CPA firms and businesses worldwide.</p>
+    <h1>Careers at Global Accounting Services</h1>
+    <p>Join our team of offshore accounting professionals</p>
   </header>
 
   <nav>
-    <a href="#about">About Us</a>
     <a href="index.html">Home</a>
-<a href="global-services.html">Services for Businesses</a>
-      <a href="cpa-firm-hire.html" class="active">CPA Firms <span class="highlight-hire">HIRE</span></a>
+    <a href="global-services.html">Services for Businesses</a>
+    <a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a>
     <a href="india-services.html">India Services</a>
-<a href="careers.html">Careers</a>
-  <a href="#contact">Contact Us</a>
- <a href="book-a-call.html" class="highlight-call-link">Book a Call</a> 
+    <a href="careers.html" class="active">Careers</a>
+    <a href="#contact">Contact</a>
+    <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
   </nav>
 
-  <div class="container">
-    <section>
-      <section style="margin-top: 40px; text-align: center;">
-        <h2>Apply to Join Our Team</h2>
-        <p>We are actively hiring across roles in bookkeeping, tax, payroll, and finance operations. Submit your profile via our secure form below.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScqlUtmivc1equOcDuw6AXpVNGEcgHnBV0mA6gWazIkjkYPYw/viewform?usp=header" target="_blank" class="apply-btn" style="margin-top: 20px; display: inline-block;">
-          Fill Application Form
-        </a>
-      </section>
-    </section>
-  </div>
+  <section>
+    <h2>Current Openings</h2>
+    <div class="job-tile">
+      <h3>Bookkeeper</h3>
+      <p>Looking for detail-oriented individuals with experience in QuickBooks/Xero and handling client communication.</p>
+    </div>
+    <div class="job-tile">
+      <h3>Tax Preparer</h3>
+      <p>Experienced in U.S. tax preparation and filings for individuals, partnerships, and corporations.</p>
+    </div>
+    <div class="job-tile">
+      <h3>Audit Support Analyst</h3>
+      <p>Assist CPA firms with walkthroughs, testing, and lead schedules. Prior audit firm experience preferred.</p>
+    </div>
+  </section>
+
+  <a href="book-a-call.html" class="floating-cta">📞 Schedule a Call</a>
 
   <footer>
     <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
