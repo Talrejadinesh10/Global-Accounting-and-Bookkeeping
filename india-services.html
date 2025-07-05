@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Global Accounting Services | Offshore Audit & Bookkeeping</title>
+  <title>India Accounting Services | Global Accounting & Bookkeeping</title>
+
+  <meta name="title" content="India Accounting Services | Global Accounting & Bookkeeping">
+  <meta name="description" content="GST, TDS, ROC, payroll, and tax compliance services tailored for Indian startups and SMEs.">
+  <meta name="keywords" content="India accounting, GST return, ROC filing, TDS, payroll compliance, bookkeeping India">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://globalaccountingandbookkeeping.com.mx/india-services">
+  <meta property="og:title" content="India Accounting Services | Global Accounting & Bookkeeping">
+  <meta property="og:description" content="Complete Indian compliance and bookkeeping services for startups, SMEs, and growing businesses.">
+  <meta property="og:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://globalaccountingandbookkeeping.com.mx/india-services">
+  <meta property="twitter:title" content="India Accounting Services | Global Accounting & Bookkeeping">
+  <meta property="twitter:description" content="File GST, income tax, payroll, and ROC with expert Indian accountants.">
+  <meta property="twitter:image" content="https://globalaccountingandbookkeeping.com.mx/background.jpg">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
     body {
       margin: 0;
@@ -37,11 +55,10 @@
       justify-content: center;
       padding: 12px 0;
       flex-wrap: wrap;
-      position: relative;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -53,27 +70,6 @@
     }
     nav a:hover {
       text-decoration: underline;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #003366;
-      min-width: 180px;
-      z-index: 1;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 4px;
-    }
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      display: block;
-      text-align: left;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
     section {
       padding: 40px 20px;
@@ -90,16 +86,34 @@
       gap: 20px;
     }
     .service-tile {
-      background: #f5faff;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
+      background-color: #f5faff;
     }
-    .service-tile h3 {
-      margin-top: 0;
+    .service-tile h3 i {
       color: #003366;
+      margin-right: 10px;
     }
-    form {
+    .cta {
+      text-align: center;
+      background-color: #e6f2ff;
+      padding: 40px 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+    .cta a {
+      background: #003366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background: #001f3f;
+    }
+    #contact form {
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -125,24 +139,6 @@
     button:hover {
       background-color: #002244;
     }
-    .cta {
-      text-align: center;
-      background-color: #e6f2ff;
-      padding: 40px 20px;
-      border-radius: 8px;
-      margin-bottom: 40px;
-    }
-    .cta a {
-      background: #003366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta a:hover {
-      background: #001f3f;
-    }
     footer {
       background: #003366;
       color: white;
@@ -150,77 +146,50 @@
       padding: 20px;
       margin-top: 40px;
     }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-      .dropdown-content {
-        position: static;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Global Accounting Services</h1>
-    <p>Efficient, Audit-Ready, and Scalable Offshore Finance Support</p>
+    <h1>India Accounting Services</h1>
+    <p>Compliance-First Finance for Indian Startups & SMEs</p>
   </header>
 
   <nav>
-    <a href="#about">About Us</a>
     <a href="index.html">Home</a>
-<a href="global-services.html">Services for Businesses</a>
-    <a href="cpa-firm-hire.html">CPA Firms Hire</a>
-    <a href="india-services.html">India Services</a>
-<a href="careers.html">Careers</a>
-  <a href="#contact">Contact Us</a>
-<a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
+    <a href="global-services.html">Services for Businesses</a>
+    <a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a>
+    <a href="india-services.html" class="active">India Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="#contact">Contact</a>
+    <a href="book-a-call.html" class="book-call">Book a Call</a>
   </nav>
 
-  <section id="overview">
-    <h2>What We Offer in India</h2>
-    <p>Our India division delivers complete compliance support for startups, SMEs, and private limited companies. We handle GST and TDS filings, income tax returns, payroll management, and ROC/MCA obligations — all with timely execution and zero penalty focus. Whether you need full-time bookkeeping or expert guidance for regulatory filings, we ensure your business stays compliant and audit-ready, always.</p>
+  <section>
+    <h2>India Compliance Support</h2>
+    <p>From GST filings to ROC compliance, our India team offers end-to-end support to keep your business compliant. We ensure error-free submissions, proactive due date tracking, and expert handling of tax, payroll, and MCA obligations.</p>
   </section>
 
-  <section id="services">
+  <section>
     <h2>Our Core India Services</h2>
     <div class="service-grid">
-      <div class="service-tile">
-        <h3>Bookkeeping & Accounting</h3>
-        <p>Maintain clean ledgers, track expenses, and reconcile accounts using Tally, Zoho, or QuickBooks. Get audit-ready books for investors or statutory filing.</p>
-      </div>
-      <div class="service-tile">
-        <h3>GST & TDS Return Filing</h3>
-        <p>Monthly/quarterly GST returns, TDS compliance, and 26Q filing — with reconciliations to prevent mismatches and penalties.</p>
-      </div>
-      <div class="service-tile">
-        <h3>Income Tax Return Filing</h3>
-        <p>Prepare and file returns for individuals, firms, LLPs, and companies. Includes advance tax calculations and planning guidance.</p>
-      </div>
-      <div class="service-tile">
-        <h3>ROC & MCA Filings</h3>
-        <p>Annual filings like AOC-4, MGT-7, DIR-3 KYC, board resolutions, and more — all handled with reminders and complete documentation.</p>
-      </div>
-      <div class="service-tile">
-        <h3>Payroll & TDS Computation</h3>
-        <p>Generate payslips, deduct PF/ESI, calculate TDS, and file returns. Supports Gusto, Zoho Payroll, and custom Excel solutions.</p>
-      </div>
-      <div class="service-tile">
-        <h3>MIS & Financial Dashboards</h3>
-        <p>Monthly profit & loss, cash flow statements, KPI dashboards — insights that help business owners make fast, confident decisions.</p>
-      </div>
+      <div class="service-tile"><h3><i class="fas fa-book"></i> Bookkeeping & Accounting</h3><p>Maintain clean ledgers, track expenses, and reconcile accounts using Tally, Zoho, or QuickBooks. Get audit-ready books.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-file-invoice"></i> GST & TDS Return Filing</h3><p>Monthly/quarterly GST returns, TDS compliance, and 26Q filing — with reconciliations to prevent mismatches.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-file-alt"></i> Income Tax Return Filing</h3><p>Prepare and file returns for individuals, LLPs, and companies. Includes advance tax calculations and planning guidance.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-building"></i> ROC & MCA Filings</h3><p>Annual filings like AOC-4, MGT-7, DIR-3 KYC, board resolutions — handled with reminders and documentation.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-rupee-sign"></i> Payroll & TDS Computation</h3><p>Generate payslips, deduct PF/ESI, calculate TDS, and file returns. Supports Zoho Payroll and Excel-based workflows.</p></div>
+      <div class="service-tile"><h3><i class="fas fa-chart-line"></i> MIS & Financial Dashboards</h3><p>Monthly profit & loss, cash flow statements, KPI dashboards — for quick and confident business decisions.</p></div>
     </div>
   </section>
 
-  <section id="cta" class="cta">
+  <section class="cta">
     <h2>Ready to File Compliantly?</h2>
     <p>Talk to our experts to ensure smooth compliance for your Indian business — <strong>Book a Free Consultation Today</strong></p>
     <a href="#contact">Request Free Consultation</a>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
     <form>
+      <h2>Contact Us</h2>
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
@@ -234,7 +203,6 @@
       <select id="service" name="service" required>
         <option value="">Select a Service</option>
         <option>Bookkeeping & Accounting</option>
-        <option>GST Registration services</option>
         <option>GST Return Filings</option>
         <option>Income Tax Return Filing</option>
         <option>ROC & MCA Filings</option>
@@ -248,7 +216,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services Pvt Ltd. All rights reserved.</p>
+    <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
   </footer>
 </body>
 </html>
