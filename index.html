@@ -205,16 +205,20 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
  .nav-links {
   display: flex;
   gap: 20px;
   align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
 }
     .nav-links li {
   list-style: none;
 }
-  .nav-links li a {
+  .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
