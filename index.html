@@ -214,6 +214,9 @@
   align-items: center;
   white-space: nowrap;
   overflow-x: auto;
+   list-style: none;
+   margin: 0;
+  padding: 0;
 }
     .nav-links li {
   list-style: none;
@@ -271,19 +274,18 @@
   <div class="nav-container">
     <div class="logo">Global Accounting</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="index.html#about">About Us</a>
-      <a href="global-services.html">Services for Businesses</a>
-      <a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a>
-      <a href="india-services.html">India Services</a>
-      <a href="careers.html">Careers</a>
-      <a href="#contact">Contact Us</a>
-      <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
-    </div>
+    <ul class="nav-links" id="navLinks">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="index.html#about">About Us</a></li>
+  <li><a href="global-services.html">Services for Businesses</a></li>
+  <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
+  <li><a href="india-services.html">India Services</a></li>
+  <li><a href="careers.html">Careers</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  <li><a href="book-a-call.html" class="highlight-call-link">Book a Call</a></li>
+</ul>
   </div>
 </nav>
-
 
   <section id="services">
     <h2>Our Core Services</h2>
