@@ -51,20 +51,14 @@
       text-align: center;
       transition: padding 0.3s ease;
     }
-    nav {
-      background: #003366;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      flex-wrap: wrap;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
+   nav {
+  background: #003366;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
     nav.sticky-nav {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       transform: scaleY(0.95);
@@ -191,53 +185,69 @@
       border-radius: 4px;
       margin-left: 8px;  
 } 
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 .hamburger {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
   padding: 5px 10px;
-}
-.nav-container {
+  color: white;
+  background: none;
+  border: none;
+}.
+    nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 12px 20px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
 }
-.nav-links {
+  .nav-links {
   display: flex;
   gap: 20px;
-  flex-wrap: nowrap;
+  list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap;
 }
     .nav-links li {
   list-style: none;
 }
-    .nav-links li a {
+  .nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #003366;
     position: absolute;
+    background-color: #003366;
     top: 60px;
     left: 0;
     width: 100%;
     padding: 10px 0;
+    z-index: 1001;
   }
+
   .nav-links.show {
     display: flex;
   }
+
   .nav-links li {
     text-align: center;
     padding: 10px 0;
@@ -250,7 +260,7 @@
     <p>Expert Finance, Audit & Compliance Support Across Borders</p>
   </header>
 
-<nav>
+  <nav id="main-nav">
   <div class="nav-container">
     <div class="logo">Global Accounting</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
