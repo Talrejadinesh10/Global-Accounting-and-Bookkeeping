@@ -194,27 +194,22 @@
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  padding: 5px 10px;
   color: white;
   background: none;
-  border: none;}
-    nav-container {
+  border: none;
+}
+    .nav-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 12px 20px;
 }
-  .nav-links {
+ .nav-links {
   display: flex;
   gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: nowrap;
+  align-items: center;
 }
     .nav-links li {
   list-style: none;
@@ -226,10 +221,17 @@
 }
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -242,10 +244,13 @@
     z-index: 1001;
   }
 
-  .nav-links.show {
+   .nav-links.show {
     display: flex;
   }
-
+    .hamburger {
+    display: block;
+  }
+}
   .nav-links li {
     text-align: center;
     padding: 10px 0;
@@ -258,20 +263,20 @@
     <p>Expert Finance, Audit & Compliance Support Across Borders</p>
   </header>
 
-  <nav id="main-nav">
+ <nav id="main-nav">
   <div class="nav-container">
     <div class="logo">Global Accounting</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="index.html#about">About Us</a></li>
-      <li><a href="global-services.html">Services for Businesses</a></li>
-      <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
-      <li><a href="india-services.html">India Services</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-      <li><a href="book-a-call.html" class="highlight-call-link">Book a Call</a></li>
-    </ul>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="global-services.html">Services for Businesses</a>
+      <a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a>
+      <a href="india-services.html">India Services</a>
+      <a href="careers.html">Careers</a>
+      <a href="#contact">Contact Us</a>
+      <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
+    </div>
   </div>
 </nav>
 
