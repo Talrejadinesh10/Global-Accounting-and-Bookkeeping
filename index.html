@@ -201,14 +201,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
 }
-.nav-links li a {
+    .nav-links li {
+  list-style: none;
+}
+    .nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
