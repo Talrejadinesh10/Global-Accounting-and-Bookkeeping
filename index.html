@@ -305,16 +305,128 @@
 </nav>
 
   <section id="services">
-    <h2>Our Core Services</h2>
+      <h3 style="color:#003366;">🌍 Global Services</h3>
+
+  <h4>For Business Owners</h4>
+  <div class="service-grid">
     <div class="service-tile">
-      <h3><a href="global-services.html">Global Accounting Solutions</a></h3>
-      <p>“Global Accounting Solutions” includes full end-to-end offshore finance support, from audit-ready bookkeeping and reconciliation to monthly and year‑end financial reporting. We work with platforms like QuickBooks, Xero, and NetSuite and ensure compliance with U.S. GAAP and IFRS frameworks. Clients benefit from streamlined workflows, reliable data accuracy, and centralized financial oversight. Our services also include cloud migration support, internal control setup, and performance dashboards for better visibility and decision-making.</p>
+      <img src="https://img.icons8.com/ios/50/003366/accounting.png" alt="Bookkeeping" />
+      <h3>Bookkeeping</h3>
+      <p>Accurate, audit-ready records every month.</p>
+      <a href="global-services.html#bookkeeping">Read More</a>
     </div>
     <div class="service-tile">
-      <h3><a href="india-services.html">India Tax & Compliance</a></h3>
-      <p>“India Tax & Compliance” covers complete statutory compliance for Indian businesses — from GST registration and filing (GSTR‑1, GSTR‑3B) to TDS and Income Tax returns. We also handle payroll deductions, statutory employee compliance (PF/ESI), and ROC filings (AOC‑4, MGT‑7), ensuring timely and penalty-free submissions. Our team integrates compliance tasks into a single dashboard, so you stay informed and audit‑ready at every step. Ideal for startups and SMEs seeking total regulatory assurance with minimal effort.</p>
+      <img src="https://img.icons8.com/ios/50/003366/report-card.png" alt="Reports" />
+      <h3>Monthly Financial Reporting</h3>
+      <p>Easy-to-understand reports that guide decisions.</p>
+      <a href="global-services.html#monthly-reports">Read More</a>
     </div>
-  </section>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/businessman.png" alt="vCFO" />
+      <h3>Virtual CFO</h3>
+      <p>Strategic financial support without full-time cost.</p>
+      <a href="global-services.html#vcfo">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/combo-chart.png" alt="Dashboards" />
+      <h3>Performance Dashboards</h3>
+      <p>Live visibility into business KPIs and targets.</p>
+      <a href="global-services.html#dashboards">Read More</a>
+    </div>
+  </div>
+
+  <h4 style="margin-top:40px;">For CPA Firms</h4>
+  <div class="service-grid">
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/collaboration.png" alt="Client Books" />
+      <h3>Client Bookkeeping Support</h3>
+      <p>Reliable offshore teams for your client books.</p>
+      <a href="cpa-firm-hire.html#clientbooks">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/calendar.png" alt="Year-End" />
+      <h3>Year-End Finalization</h3>
+      <p>Clean up and close books for year-end audits.</p>
+      <a href="cpa-firm-hire.html#yearend">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/tax.png" alt="Tax Prep" />
+      <h3>Tax Preparation</h3>
+      <p>Workpapers, 1099s, schedules & U.S. filings.</p>
+      <a href="cpa-firm-hire.html#taxprep">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/audit.png" alt="Audit Support" />
+      <h3>Audit Support</h3>
+      <p>PBC schedules, testing, and documentation.</p>
+      <a href="cpa-firm-hire.html#audit">Read More</a>
+    </div>
+  </div>
+
+  <!-- INDIA SERVICES SECTION -->
+  <h3 style="margin-top:50px; color:#003366;">🇮🇳 India Services</h3>
+  <div class="service-grid">
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/gst.png" alt="GST" />
+      <h3>GST Compliance</h3>
+      <p>Monthly GSTR filings, reconciliation & support.</p>
+      <a href="india-services.html#gst">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/income-tax.png" alt="Income Tax" />
+      <h3>Income Tax & TDS</h3>
+      <p>Business returns, Form 26AS, Form 16 & more.</p>
+      <a href="india-services.html#tax">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/salary.png" alt="Payroll" />
+      <h3>Payroll Compliance</h3>
+      <p>PF, ESI, Form 24Q, and employee taxation.</p>
+      <a href="india-services.html#payroll">Read More</a>
+    </div>
+    <div class="service-tile">
+      <img src="https://img.icons8.com/ios/50/003366/company.png" alt="MCA/ROC" />
+      <h3>MCA/ROC Filings</h3>
+      <p>AOC-4, MGT-7 & company annual compliance.</p>
+      <a href="india-services.html#roc">Read More</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .service-tile {
+    background-color: #f5faff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .service-tile img {
+    width: 50px;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+</style>
 
   <section id="why-us">
     <h2>Why Partner With Us</h2>
