@@ -34,18 +34,23 @@
       padding: 80px 20px;
       text-align: center;
     }
-    nav {
+      nav {
       background: #003366;
       color: white;
+      padding: 12px 20px;
       display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .nav-brand {
+      font-weight: bold;
+      color: white;
     }
     nav a {
       color: white;
@@ -192,12 +197,19 @@
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-    @media (max-width: 768px) {
-  .floating-cta {
-    bottom: 70px; /* above the email toggle or footer if needed */
-    right: 15px;
-  }
-}
+ .floating-cta {
+      top: unset;
+      bottom: 20px;
+      transform: none;
+    }   
+@media (max-width: 768px) {
+      .floating-cta {
+        right: 10px;
+        font-size: 14px;
+        padding: 10px 14px;
+        max-width: 160px;
+        line-height: 1.2;
+        white-space: normal;}
     .talk-expert-btn {
       display: inline-block;
   padding: 12px 24px;
@@ -387,6 +399,9 @@
   </header>
 
   <nav>
+    <div class="nav-brand">Global Accounting</div>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="index.html#about">About Us</a>
     <a href="global-services.html" class="active">Services for Businesses</a>
@@ -394,6 +409,7 @@
     <a href="india-services.html">India Services</a>
     <a href="careers.html">Careers</a>
     <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
+  </div>
   </nav>
 <div class="left-email-form">
   <form action="https://formspree.io/f/mwpbgdok" method="POST">
