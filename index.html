@@ -343,22 +343,16 @@
 </ul>
   </div>
 </nav>
-<div class="left-email-form" style="max-width: 400px; padding: 20px; border-radius: 10px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<div class="left-email-form">
   <form action="https://formspree.io/f/mwpbgdok" method="POST">
-    <h4 style="margin-bottom: 10px;">Let’s Discuss Your Accounting Needs</h4>
+    <h4>Let’s Discuss Your Accounting Needs</h4>
     <input 
       type="email" 
       name="email" 
       placeholder="Your Email Address" 
-      required 
-      style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;"
+      required
     >
-    <button 
-      type="submit" 
-      style="background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;"
-    >
-      Connect with Us
-    </button>
+    <button type="submit">Connect with Us</button>
   </form>
 </div>
 
@@ -527,38 +521,40 @@
     50% { box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); }
     100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.1); }
   }
-   .floating-email-form {
+   .left-email-form {
   position: fixed;
-  bottom: 100px;
+  top: 50%;
   left: 20px;
-  background: #003366;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 1002;
-  width: 260px;
+  transform: translateY(-50%);
+  background-color: #003366; /* Deep blue */
   color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1003;
+  width: 240px;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.floating-email-form h4 {
+.left-email-form h4 {
+  margin: 0 0 10px;
   font-size: 1rem;
-  color: white;
-  margin-bottom: 12px;
 }
 
-.floating-email-form input[type="email"] {
+.left-email-form input[type="email"] {
   width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
+  padding: 8px;
   margin-bottom: 10px;
-  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
 }
 
-.floating-email-form button {
+.left-email-form button {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   background-color: #ffcc00;
   color: #003366;
   font-weight: bold;
@@ -568,7 +564,7 @@
   transition: background-color 0.3s ease;
 }
 
-.floating-email-form button:hover {
+.left-email-form button:hover {
   background-color: #ffc107;
 }
     .floating-email-toggle {
@@ -586,7 +582,7 @@
   z-index: 1003;
 }
 @media (max-width: 768px) {
-  .floating-email-form {
+  .left-email-form {
     display: none;
   }
   .floating-email-form.show {
