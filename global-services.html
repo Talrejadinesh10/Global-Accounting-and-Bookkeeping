@@ -167,28 +167,31 @@
   text-decoration: none;
   z-index: 1001;
 }
+    .floating-contact-btn:hover, .floating-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
     .floating-cta {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
   background: #ffcc00;
   color: #003366;
-  padding: 12px 18px;
-  border-radius: 40px;
+  padding: 14px 20px;
+  border-radius: 10px 0 0 10px;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
   text-decoration: none;
   z-index: 1001;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite;
 }
 .floating-cta:hover {
   background: #ffc107;
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-.floating-contact-btn:hover, .floating-cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  }
     @media (max-width: 768px) {
   .floating-cta {
     bottom: 70px; /* above the email toggle or footer if needed */
@@ -374,6 +377,7 @@
     </form>
   </section>
 
+  <a href="contact-us.html" class="floating-contact-btn">📬 Get a quote</a>
   <a href="book-a-call.html" class="floating-cta">📞 Schedule a Call</a>
 
   <footer>
