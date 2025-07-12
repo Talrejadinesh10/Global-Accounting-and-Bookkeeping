@@ -520,7 +520,31 @@
 .floating-email-form button:hover {
   background-color: #ffc107;
 }
-    
+    .floating-email-toggle {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1003;
+}
+@media (max-width: 768px) {
+  .floating-email-form {
+    display: none;
+  }
+  .floating-email-form.show {
+    display: block;
+  }
+  .floating-email-toggle {
+    display: block;
+  }
+}   
 </style>
   <section id="why-us">
     <h2>Why Partner With Us</h2>
