@@ -335,17 +335,35 @@
 </div>
 
 <section id="services">
-  <div class="software-logos">
-  <p>We work with leading platforms</p>
-  <div class="logos-container">
-    <img src="quickbooks-logo.png" alt="QuickBooks" />
-    <img src="Xero-logo.svg.png" alt="Xero" />
-    <img src="zoho-logo.webp" alt="Zoho Books" />
-    <img src="freshbooks- logo.png" alt="FreshBooks" />
-    <img src="sageintacct -logo.png" alt="Sage Intacct" />
-    <img src="netsuite-logo.png" alt="NetSuite" />
+  <section class="software-support">
+  <h2>Softwares We Support</h2>
+  <div class="software-grid">
+    <div class="software-item">
+      <img src="quickbooks-logo.png" alt="QuickBooks" />
+      <p>QuickBooks</p>
+    </div>
+    <div class="software-item">
+      <img src="xero-logo.png" alt="Xero" />
+      <p>Xero</p>
+    </div>
+    <div class="software-item">
+      <img src="zoho-logo.png" alt="Zoho Books" />
+      <p>Zoho Books</p>
+    </div>
+    <div class="software-item">
+      <img src="sage-logo.png" alt="Sage" />
+      <p>Sage</p>
+    </div>
+    <div class="software-item">
+      <img src="netsuite-logo.png" alt="NetSuite" />
+      <p>NetSuite</p>
+    </div>
+    <div class="software-item">
+      <img src="wave-logo.png" alt="Wave Accounting" />
+      <p>Wave</p>
+    </div>
   </div>
-</div>
+</section>
   <h2 style="text-align:center; font-size: 2rem; color:#003366;">🌍 GLOBAL SERVICES</h2>
 
   <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
@@ -579,6 +597,42 @@
 .logos-container img:hover {
   filter: grayscale(0%);
   transform: scale(1.05);
+}
+    .software-support {
+  max-width: 1200px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.software-support h2 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.software-item {
+  text-align: center;
+}
+
+.software-item img {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.software-item p {
+  font-size: 0.85rem;
+  color: #003366;
+  margin-top: 6px;
 }
 </style>
   <section id="why-us">
