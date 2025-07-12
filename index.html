@@ -592,6 +592,35 @@
     display: block;
   }
 }   
+    .software-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.software-item {
+  text-align: center;
+  flex: 1 1 100px;
+}
+
+.software-item img {
+  width: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.software-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.software-item p {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #333;
+}
     .software-logos {
   text-align: center;
   padding: 40px 20px 10px;
