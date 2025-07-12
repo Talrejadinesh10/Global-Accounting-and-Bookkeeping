@@ -343,8 +343,16 @@
 </ul>
   </div>
 </nav>
-<div class="floating-email-form" style="width: 100%; max-width: 500px;">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaoLNK4VSyQH5dfN7Z8ZxXlNtaUXzr-Y2n2B5YD-8TMPyhmA/viewform?embedded=true" width="640" height="504" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="google-form-container">
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLScaoLNK4VSyQH5dfN7Z8ZxXlNtaUXzr-Y2n2B5YD-8TMPyhmA/viewform?embedded=true" 
+    width="100%" 
+    height="800" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0">
+    Loading…
+  </iframe>
 </div>
 
 <section id="services">
@@ -646,6 +654,17 @@
   font-size: 0.85rem;
   color: #003366;
   margin-top: 6px;
+}
+    .google-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.google-form-container iframe {
+  width: 100%;
+  border: none;
 }
 </style>
   <section id="why-us">
