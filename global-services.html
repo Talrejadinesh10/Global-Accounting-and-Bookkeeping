@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -74,7 +75,7 @@
     .highlight-call-link:hover {
       background-color: #ffc107;
     }
-.highlight-hire {
+    .highlight-hire {
       background-color: #e6f7ff;
       color: #003366;
       display: inline-block;
@@ -82,7 +83,8 @@
       font-weight: bold;
       padding: 2px 6px;
       border-radius: 4px;
-      margin-left: 8px;    }
+      margin-left: 8px;
+    }
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -107,14 +109,14 @@
       color: #003366;
       margin-right: 10px;
     }
-    .cta {
+    .cta, .quote-box {
       text-align: center;
       background-color: #e6f2ff;
       padding: 40px 20px;
       border-radius: 8px;
       margin-bottom: 40px;
     }
-    .cta a {
+    .cta a, .quote-box a {
       background: #003366;
       color: white;
       padding: 12px 25px;
@@ -122,7 +124,7 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .cta a:hover {
+    .cta a:hover, .quote-box a:hover {
       background: #001f3f;
     }
     form {
@@ -173,6 +175,19 @@
     .floating-cta:hover {
       background: #ffc107;
     }
+    .expert-btn {
+      display: inline-block;
+      margin-left: 15px;
+      background: #003366;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .expert-btn:hover {
+      background: #001f3f;
+    }
   </style>
 </head>
 <body>
@@ -183,22 +198,21 @@
 
   <nav>
     <a href="index.html">Home</a>
-<a href="index.html#about">About Us</a>
+    <a href="index.html#about">About Us</a>
     <a href="global-services.html" class="active">Services for Businesses</a>
     <a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a>
     <a href="india-services.html">India Services</a>
     <a href="careers.html">Careers</a>
-    <a href="#contact">Contact Us</a>
     <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
   </nav>
 
   <section id="overview">
     <h2>Solutions for Global Clients</h2>
-    <p>We help global business owners manage their accounting with confidence — from bookkeeping and payroll to reconciliations and year-end reports. Our team works with tools like QuickBooks, Xero, ZOHO Books and NetSuite, ensuring accurate, audit-ready financials and full compliance. Think of us as your offshore finance team, so you can focus on growing your business.</p>
+    <p>We help global business owners manage their accounting with confidence — from bookkeeping and payroll to reconciliations and year-end reports...</p>
   </section>
 
   <section id="services-business">
-    <h2>Services for Business Owners</h2>
+    <h2>Services for Business Owners <a href="#contact" class="expert-btn">Talk to an Expert</a></h2>
     <div class="service-grid">
       <div class="service-tile"><h3><i class="fas fa-user-tie"></i> AR & AP Management</h3><p>We offer end-to-end Accounts Receivable and Accounts Payable (AR/AP) management tailored to your business needs. We ensure accurate recording, timely payments, improved vendor relationships and optimized cash flow.</p></div>
       <div class="service-tile"><h3><i class="fas fa-book"></i> Outsourcing Bookkeeping Services</h3><p>We deliver accurate, audit-ready bookkeeping services to help you stay compliant and financially organized. Services are customized based on your entity type, industry, and local tax needs. Our bookkeeping gives you the financial clarity to grow with confidence.</p></div>
@@ -209,6 +223,12 @@
       <div class="service-tile"><h3><i class="fas fa-calculator"></i> Outsourced Tax Preparations</h3><p>We deliver accurate, compliant, and reviewer-ready tax preparation services for individuals, partnerships, corporations, and trusts. Our team handles preparation of multiple tax forms & returns depending on the country. Returns are supported with workpapers, schedules, and e-filing formats.</p></div>
       <div class="service-tile"><h3><i class="fas fa-search-dollar"></i> Cost Operations Analysis</h3><p>We offer in-depth cost operations analysis to help businesses identify inefficiencies, reduce overheads, and improve profitability. Our services include cost center breakdowns, variance analysis, margin analysis, and fixed vs. variable cost modeling. We help uncover hidden cost drivers, benchmark industry metrics, and recommend actionable savings.</p></div>
     </div>
+  </section>
+
+   <section class="quote-box">
+    <h2>Let’s Discuss Your Accounting Needs</h2>
+    <p>Share your business goals, and our team will design a finance solution for you.</p>
+    <a href="book-a-call.html">Get a Quote</a>
   </section>
 
   <section class="cta">
@@ -222,13 +242,10 @@
       <h2>Contact Us</h2>
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
-
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
-
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" required />
-
       <label for="service">Service Required</label>
       <select id="service" name="service" required>
         <option value="">Select a Service</option>
@@ -241,13 +258,12 @@
         <option>Audit Support Staff</option>
         <option>Cost operations analysis</option>
       </select>
-
       <button type="submit">Submit</button>
     </form>
   </section>
 
   <a href="book-a-call.html" class="floating-cta">📞 Schedule a Call</a>
-  
+
   <footer>
     <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
   </footer>
