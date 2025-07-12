@@ -156,10 +156,10 @@
     }
     .floating-cta {
       position: fixed;
-      bottom: 80px;
+      bottom: 100px;
       right: 20px;
-      background: #ffcc00;
-      color: #003366;
+      background: #003366;
+      color: #ffffff;
       padding: 12px 18px;
       border-radius: 40px;
       font-weight: bold;
@@ -168,9 +168,11 @@
       z-index: 1001;
     }
     .floating-cta:hover {
+      transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
       background: #ffc107;
     }
-    .expert-btn {
+    .talk-expert-btn {
       display: inline-block;
   padding: 12px 24px;
   background-color: #ffcc00;
@@ -181,7 +183,7 @@
   margin-top: 16px;
   transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    .expert-btn:hover {
+    .talk-expert-btn:hover {
       background-color: #ffc107;
   transform: translateY(-2px);
     }
@@ -197,6 +199,77 @@
         bottom: 20px;
       }
     }
+    .left-email-form {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #003366; /* Deep blue */
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1003;
+  width: 240px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-email-form h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.left-email-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
+}
+
+.left-email-form button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-email-form button:hover {
+  background-color: #ffc107;
+}
+    .floating-email-toggle {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1003;
+}
+@media (max-width: 768px) {
+  .left-email-form {
+    display: none;
+  }
+  .floating-email-form.show {
+    display: block;
+  }
+  .floating-email-toggle {
+    display: block;
+  }
+}  
   </style>
 </head>
 <body>
@@ -214,6 +287,18 @@
     <a href="careers.html">Careers</a>
     <a href="book-a-call.html" class="highlight-call-link">Book a Call</a>
   </nav>
+<div class="left-email-form">
+  <form action="https://formspree.io/f/mwpbgdok" method="POST">
+    <h4>Let’s Discuss Your Accounting Needs</h4>
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your Email Address" 
+      required
+    >
+    <button type="submit">Connect with Us</button>
+  </form>
+</div>
 
   <section id="overview">
     <h2>Solutions for Global Clients</h2>
@@ -221,7 +306,7 @@
   </section>
 
   <section id="services-business">
-    <h2>Services for Business Owners <a href="#contact" class="expert-btn">Talk to an Expert</a></h2>
+    <h2>Services for Business Owners <a href="#contact" class="talk-expert-btn">📞Talk to an Expert</a></h2>
     <div class="service-grid">
       <div class="service-tile"><h3><i class="fas fa-user-tie"></i> AR & AP Management</h3><p>We offer end-to-end Accounts Receivable and Accounts Payable (AR/AP) management tailored to your business needs. We ensure accurate recording, timely payments, improved vendor relationships and optimized cash flow.</p></div>
       <div class="service-tile"><h3><i class="fas fa-book"></i> Outsourcing Bookkeeping Services</h3><p>We deliver accurate, audit-ready bookkeeping services to help you stay compliant and financially organized. Services are customized based on your entity type, industry, and local tax needs. Our bookkeeping gives you the financial clarity to grow with confidence.</p></div>
@@ -232,12 +317,6 @@
       <div class="service-tile"><h3><i class="fas fa-calculator"></i> Outsourced Tax Preparations</h3><p>We deliver accurate, compliant, and reviewer-ready tax preparation services for individuals, partnerships, corporations, and trusts. Our team handles preparation of multiple tax forms & returns depending on the country. Returns are supported with workpapers, schedules, and e-filing formats.</p></div>
       <div class="service-tile"><h3><i class="fas fa-search-dollar"></i> Cost Operations Analysis</h3><p>We offer in-depth cost operations analysis to help businesses identify inefficiencies, reduce overheads, and improve profitability. Our services include cost center breakdowns, variance analysis, margin analysis, and fixed vs. variable cost modeling. We help uncover hidden cost drivers, benchmark industry metrics, and recommend actionable savings.</p></div>
     </div>
-  </section>
-
-   <section class="quote-box">
-    <h2>Let’s Discuss Your Accounting Needs</h2>
-    <p>Share your business goals, and our team will design a finance solution for you.</p>
-    <a href="book-a-call.html">Get a Quote</a>
   </section>
 
   <section class="cta">
