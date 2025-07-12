@@ -167,10 +167,34 @@
   text-decoration: none;
   z-index: 1001;
 }
+    .floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffcc00;
+  color: #003366;
+  padding: 12px 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 1001;
+}
+.floating-cta:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
 .floating-contact-btn:hover, .floating-cta:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   }
+    @media (max-width: 768px) {
+  .floating-cta {
+    bottom: 70px; /* above the email toggle or footer if needed */
+    right: 15px;
+  }
+}
     .talk-expert-btn {
       display: inline-block;
   padding: 12px 24px;
@@ -268,6 +292,7 @@
   .floating-email-toggle {
     display: block;
   }
+  
 }  
   </style>
 </head>
