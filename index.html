@@ -326,6 +326,13 @@
 </ul>
   </div>
 </nav>
+  <div class="floating-email-form">
+  <form action="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx" method="post" enctype="text/plain">
+    <h4>Let’s Discuss Your Accounting Needs</h4>
+    <input type="email" name="Email" placeholder="Your Email Address" required>
+    <button type="submit">Connect with Us</button>
+  </form>
+</div>
 
 <section id="services">
   <h2 style="text-align:center; font-size: 2rem; color:#003366;">🌍 GLOBAL SERVICES</h2>
@@ -463,6 +470,49 @@
     50% { box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); }
     100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.1); }
   }
+    .floating-email-form {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1002;
+  width: 260px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.floating-email-form h4 {
+  font-size: 1rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.floating-email-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.floating-email-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.floating-email-form button:hover {
+  background-color: #ffc107;
+}
 </style>
   <section id="why-us">
     <h2>Why Partner With Us</h2>
