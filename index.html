@@ -743,23 +743,30 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
   <section id="contact">
     <h2>Contact Us</h2>
     <p>You can reach us directly at <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">hireaccountant@globalaccountingandbookkeeping.com.mx</a></p>
-    <form>
-      <label>Name</label><input type="text" required />
-      <label>Email</label><input type="email" required />
-      <label>Phone Number</label><input type="tel" required />
-      <label>Service Required</label>
-      <select required>
-        <option value="">Select a Service</option>
-        <option>Bookkeeping services</option>
-        <option>Accounting services(CPA Firm)</option>
-        <option>Tax services(CPA Firm)</option>
-        <option>Audit services</option>
-        <option>Year-end related</option>
-        <option>GST Services</option>
-        <option>Company services</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
+    <form action="https://formspree.io/f/meokyblp" method="POST">
+  <label>Name</label>
+  <input type="text" name="name" required />
+
+  <label>Email</label>
+  <input type="email" name="email" required />
+
+  <label>Phone Number</label>
+  <input type="tel" name="phone" required />
+
+  <label>Service Required</label>
+  <select name="service" required>
+    <option value="">Select a Service</option>
+    <option>Bookkeeping services</option>
+    <option>Accounting services (CPA Firm)</option>
+    <option>Tax services (CPA Firm)</option>
+    <option>Audit services</option>
+    <option>Year-end related</option>
+    <option>GST Services</option>
+    <option>Company services</option>
+  </select>
+  <input type="hidden" name="_redirect" value="https://globalaccountingandbookkeeping.com.mx/thank-you.html" />
+  <button type="submit">Submit</button>
+</form>
   </section>
 
   <a href="contact-us.html" class="floating-contact-btn">📬 Get a quote</a>
