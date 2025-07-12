@@ -343,16 +343,12 @@
 </ul>
   </div>
 </nav>
-<div class="google-form-container">
-  <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLScaoLNK4VSyQH5dfN7Z8ZxXlNtaUXzr-Y2n2B5YD-8TMPyhmA/viewform?embedded=true" 
-    width="100%" 
-    height="800" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0">
-    Loading…
-  </iframe>
+<div class="left-email-form">
+  <form action="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx" method="post" enctype="text/plain">
+    <h4>Let’s discuss your accounting needs</h4>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <button type="submit">Submit</button>
+  </form>
 </div>
 
 <section id="services">
@@ -655,16 +651,53 @@
   color: #003366;
   margin-top: 6px;
 }
-    .google-form-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+.left-email-form {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1003;
+  width: 240px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.google-form-container iframe {
+.left-email-form h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.left-email-form input[type="email"] {
   width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
   border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.left-email-form button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.left-email-form button:hover {
+  background-color: #ffc107;
+}
+@media (max-width: 768px) {
+  .left-email-form {
+    display: none;
+  }
 }
 </style>
   <section id="why-us">
