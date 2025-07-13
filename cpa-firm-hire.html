@@ -26,22 +26,65 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
+ html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9fcff;
       color: #2e1a1a;
     }
-    nav {
-      background: #003366;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+     .talk-expert-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #003366;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.talk-expert-btn:hover {
+  background-color: #ffc107;
+  transform: translateY(-2px);
+}
+    .floating-contact-btn {
+  position: fixed;
+  bottom: 100px; /* Pushes above Schedule a Call */
+  right: 20px;
+  background: #003366;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 1001;
+}
+.floating-contact-btn:hover, .floating-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      transition: padding 0.3s ease;
+    }
+   nav {
+  background: #003366;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+    nav.sticky-nav {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transform: scaleY(0.95);
     }
     nav a {
       color: white;
@@ -49,41 +92,11 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a.book-call {
-      background-color: #ffc107;
-      color: black;
-      padding: 6px 12px;
-      border-radius: 4px;
+    nav a.active {
+      border-bottom: 2px solid #ffcc00;
     }
     nav a:hover {
       text-decoration: underline;
-    }
-    .highlight-hire {
-      background-color: #e6f7ff;
-      color: #003366;
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      padding: 70px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 4px #000;
-    }
-    header p {
-      font-size: 1.3rem;
-      text-shadow: 1px 1px 3px #000;
     }
     section {
       padding: 40px 20px;
@@ -94,7 +107,7 @@
       color: #003366;
       margin-bottom: 20px;
     }
-    .service-grid {
+ .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
@@ -109,73 +122,232 @@
       color: #003366;
       margin-right: 10px;
     }
-    .cta {
-      text-align: center;
-      background-color: #e6f2ff;
-      padding: 40px 20px;
-      border-radius: 8px;
-      margin-bottom: 40px;
-    }
-    .cta a {
-      background: #003366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
+    .button-group a,
+    .cta a,
+    button {
+      padding: 12px 24px;
+      background-color: #003366;
+      color: #fff;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
     }
-    .cta a:hover {
-      background: #001f3f;
+    .button-group a:hover,
+    .cta a:hover,
+    button:hover {
+      background-color: #001f3f;
     }
-    #contact form {
+    form {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     input, select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-    button {
-      padding: 12px;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background-color: #002244;
-    }
     footer {
       background: #003366;
       color: white;
       text-align: center;
       padding: 20px;
+    }
+    .cta {
+      text-align: center;
       margin-top: 40px;
+      background-color: #e6f2ff;
+      padding: 40px 20px;
+      border-radius: 8px;
     }
     .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ffcc00;
-      color: #003366;
-      padding: 12px 18px;
-      border-radius: 40px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #ffcc00;
+  color: #003366;
+  padding: 14px 20px;
+  border-radius: 10px 0 0 10px;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+  text-decoration: none;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite;
+}
+
+.floating-cta:hover {
+  background: #ffc107;
+  box-shadow: 0 0 16px rgba(255, 204, 0, 0.9);
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 204, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+  }
+}
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; }
+    }
+    .highlight-call-link {
+      background-color: #ffcc00;
+      color: #003366 !important;
+      padding: 8px 16px;
+      border-radius: 5px;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-left: 10px;
+    }
+    .highlight-call-link:hover {
+      background-color: #ffc107;
       text-decoration: none;
-      z-index: 1001;
     }
-    .floating-cta:hover {
-      background: #ffc107;
-    }
+.highlight-hire 
+    {
+      background-color: #e6f7ff;
+      color: #003366;
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 8px;  
+} 
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+}
+    .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+   list-style: none;
+   margin: 0;
+  padding: 0;
+}
+    .nav-links::-webkit-scrollbar {
+  display: none;
+}
+    .nav-links li {
+  list-style: none;
+}
+  .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #003366;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+   .nav-links.show {
+    display: flex;
+  }
+    .hamburger {
+    display: block;
+  }
+}
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+    .left-email-form {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1003;
+  width: 240px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-email-form h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.left-email-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
+}
+
+.left-email-form button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-email-form button:hover {
+  background-color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .left-email-form {
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
