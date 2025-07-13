@@ -12,33 +12,33 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
-    html { scroll-behavior: smooth; }
+ html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      padding-top: 60px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9fcff;
       color: #2e1a1a;
     }
+     
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
       background-size: cover;
       color: #fff;
       padding: 80px 20px;
       text-align: center;
+      transition: padding 0.3s ease;
     }
-    nav {
-      background: #003366;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      flex-wrap: wrap;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+   nav {
+  background: #003366;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+    nav.sticky-nav {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transform: scaleY(0.95);
     }
     nav a {
       color: white;
@@ -52,27 +52,6 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .highlight-call-link {
-      background-color: #ffc107;
-      color: #003366 !important;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-    .highlight-call-link:hover {
-      background-color: #ffc107;
-    }
-    .highlight-hire {
-      background-color: #e6f7ff;
-      color: #003366;
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -82,36 +61,118 @@
       color: #003366;
       margin-bottom: 20px;
     }
-    .job-tile {
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f5faff;
-      margin-bottom: 20px;
-    }
-    footer {
+       footer {
       background: #003366;
       color: white;
       text-align: center;
       padding: 20px;
     }
-    .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ffcc00;
-      color: #003366;
-      padding: 12px 18px;
-      border-radius: 40px;
+       .highlight-call-link {
+      background-color: #ffcc00;
+      color: #003366 !important;
+      padding: 8px 16px;
+      border-radius: 5px;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-left: 10px;
+    }
+    .highlight-call-link:hover {
+      background-color: #ffc107;
       text-decoration: none;
-      z-index: 1001;
     }
-    .floating-cta:hover {
-      background: #ffc107;
-    }
+.highlight-hire 
+    {
+      background-color: #e6f7ff;
+      color: #003366;
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 8px;  
+} 
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+}
+    .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+ .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: auto;
+   list-style: none;
+   margin: 0;
+  padding: 0;
+}
+    .nav-links::-webkit-scrollbar {
+  display: none;
+}
+    .nav-links li {
+  list-style: none;
+}
+  .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #003366;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+   .nav-links.show {
+    display: flex;
+  }
+    .hamburger {
+    display: block;
+  }
+}
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
   </style>
+     <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
   <header>
