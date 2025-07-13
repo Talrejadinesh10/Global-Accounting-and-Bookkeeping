@@ -98,27 +98,23 @@
     }
     section h2 {
       color: #003366;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+ .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
     .service-tile {
-      margin-top: 20px;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
       background-color: #f5faff;
     }
-.service-tile h3 a,
-.service-tile a {
-  color: #003366;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.service-tile h3 a:hover,
-.service-tile a:hover {
-  text-decoration: underline;
-  color: #001f3f;
-}
+    .service-tile h3 i {
+      color: #003366;
+      margin-right: 10px;
+    }
     .button-group a,
     .cta a,
     button {
@@ -223,12 +219,6 @@
       border-radius: 4px;
       margin-left: 8px;  
 } 
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
 .hamburger {
   display: none;
   font-size: 1.8rem;
