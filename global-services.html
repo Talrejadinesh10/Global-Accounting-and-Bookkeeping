@@ -304,6 +304,58 @@
     text-align: center;
     padding: 10px 0;
   }
+    .left-email-form {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1003;
+  width: 240px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-email-form h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.left-email-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: black;
+}
+
+.left-email-form button {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-email-form button:hover {
+  background-color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .left-email-form {
+    display: none;
+  }
+}
   </style>
   <script>
     function toggleMenu() {
@@ -333,23 +385,18 @@
   </div>
 </nav>
   
-<section class="cta">
-  <h2>Let’s Discuss Your Accounting Needs</h2>
-  <form action="https://formspree.io/f/mwpbgdok" method="POST" style="max-width: 500px; margin: 20px auto;">
+<div class="left-email-form">
+  <form action="https://formspree.io/f/mwpbgdok" method="POST">
+    <h4>Let’s Discuss Your Accounting Needs</h4>
     <input 
       type="email" 
       name="email" 
       placeholder="Your Email Address" 
       required
-      style="width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;"
     >
-    <button 
-      type="submit" 
-      style="background-color: #003366; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">
-      Connect with Us
-    </button>
+    <button type="submit">Connect with Us</button>
   </form>
-</section>
+</div>
   <section id="overview">
     <h2>Solutions for Global Clients</h2>
     <p>We help global business owners manage their accounting with confidence — from bookkeeping and payroll to reconciliations and year-end reports. Our team works with tools like QuickBooks, Xero, ZOHO Books and NetSuite, ensuring accurate, audit-ready financials and full compliance. Think of us as your offshore finance team, so you can focus on growing your business.</p>
