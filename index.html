@@ -736,6 +736,10 @@
   .left-email-form {
     display: none;
   }
+}.
+    hide-floating-cta .floating-cta,
+.hide-floating-cta .floating-contact-btn {
+  display: none !important;
 }
 </style>
   <section id="why-us">
@@ -810,6 +814,7 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("show");
+    document.body.classList.toggle("hide-floating-cta", nav.classList.contains("show"));
   }
 </script>
   <script>
