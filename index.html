@@ -737,10 +737,10 @@
     display: none;
   }
 }.
-    hide-floating-cta .floating-cta,
-.hide-floating-cta .floating-contact-btn {
+ body.menu-open .floating-cta {
   display: none !important;
 }
+
 </style>
   <section id="why-us">
     <h2>Why Partner With Us</h2>
@@ -818,14 +818,15 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
   }
 </script>
   <script>
-    window.addEventListener('scroll', function() {
-      const nav = document.getElementById('main-nav');
-      if (window.scrollY > 80) {
-        nav.classList.add('sticky-nav');
-      } else {
-        nav.classList.remove('sticky-nav');
-      }
-    });
+     function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    const isOpen = nav.classList.toggle("show");
+    if (isOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }
 
     window.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('#main-nav a');
