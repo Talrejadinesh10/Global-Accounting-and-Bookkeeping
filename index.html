@@ -809,16 +809,8 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
 
   <footer>
     <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
-  </footer>
-<script>
+  </footer><script>
   function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-    document.body.classList.toggle("hide-floating-cta", nav.classList.contains("show"));
-  }
-</script>
-  <script>
-     function toggleMenu() {
     const nav = document.getElementById("navLinks");
     const isOpen = nav.classList.toggle("show");
     if (isOpen) {
@@ -828,21 +820,22 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
     }
   }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('#main-nav a');
-      const url = window.location.href;
-      links.forEach(link => {
-        if (url.includes(link.getAttribute('href'))) {
-          link.classList.add('active');
-        }
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('#main-nav a');
+    const url = window.location.href;
+
+    links.forEach(link => {
+      if (url.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      }
+
+      link.addEventListener('click', () => {
+        document.getElementById("navLinks").classList.remove("show");
+        document.body.classList.remove("menu-open");
       });
     });
-  </script>
-    <script>
-  function toggleEmailForm() {
-    const emailBox = document.getElementById('emailForm');
-    emailBox.classList.toggle('show');
-  }
+  });
 </script>
+
 </body>
 </html>
