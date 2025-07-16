@@ -232,13 +232,38 @@
         max-width: 1000px;
       }
     }
-    </style>
+    
+    body.menu-open .floating-cta {
+  display: none !important;
+} 
+  </style>
      <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('show');
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    const isOpen = nav.classList.toggle("show");
+    if (isOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
     }
-  </script>
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('#main-nav a');
+    const url = window.location.href;
+
+    links.forEach(link => {
+      if (url.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      }
+
+      link.addEventListener('click', () => {
+        document.getElementById("navLinks").classList.remove("show");
+        document.body.classList.remove("menu-open");
+      });
+    });
+  });
+</script>
 </head>
 <body>
   <header>
