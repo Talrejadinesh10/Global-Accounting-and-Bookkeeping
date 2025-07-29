@@ -250,10 +250,15 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('#main-nav a');
-    const url = window.location.href;
+    const currentPath = window.location.pathname;
 
     links.forEach(link => {
-      if (url.includes(link.getAttribute('href'))) {
+      const linkPath = new URL(link.href).pathname;
+
+      if (
+        (currentPath === '/' && (linkPath.endsWith('/index.html') || linkPath === '/')) ||
+        currentPath === linkPath
+      ) {
         link.classList.add('active');
       }
 
