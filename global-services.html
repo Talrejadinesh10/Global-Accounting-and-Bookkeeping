@@ -356,21 +356,23 @@
     }
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('#main-nav a');
-    const url = window.location.href;
+window.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('#main-nav a');
+  const currentPath = window.location.pathname;
 
-    links.forEach(link => {
-      if (url.includes(link.getAttribute('href'))) {
-        link.classList.add('active');
-      }
+  links.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
 
-      link.addEventListener('click', () => {
-        document.getElementById("navLinks").classList.remove("show");
-        document.body.classList.remove("menu-open");
-      });
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+
+    link.addEventListener('click', () => {
+      document.getElementById("navLinks").classList.remove("show");
+      document.body.classList.remove("menu-open");
     });
   });
+});
 </script>
   
 </head>
