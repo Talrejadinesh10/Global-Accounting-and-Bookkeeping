@@ -740,6 +740,64 @@
  body.menu-open .floating-cta {
   display: none !important;
 }
+    .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #003366;
+  color: white;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-certifications .cert-logos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-certifications .cert-logos img {
+  max-height: 40px;
+  background: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.services-footer {
+  border-top: 1px solid #446;
+  margin-top: 20px;
+}
+
 
 </style>
   <section id="why-us">
@@ -807,9 +865,64 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
   <a href="contact-us.html" class="floating-contact-btn">📬 Get a quote</a>
   <a href="book-a-call.html" class="floating-cta">📞 Schedule a Call</a>
 
-  <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
-  </footer>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column company-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#why-us">Why Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="book-a-call.html">Book a Call</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column footer-certifications">
+      <h4>Certifications</h4>
+      <div class="cert-logos">
+        <img src="quickbooks-cert.png" alt="QuickBooks Certification">
+        <img src="quickbooks-lv1.png" alt="QuickBooks Level 1">
+        <img src="quickbooks-lv2.png" alt="QuickBooks Level 2">
+        <img src="xero-advisor.png" alt="Xero Advisor">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-container services-footer">
+    <div class="footer-column">
+      <h4>Services for Business Owners</h4>
+      <ul>
+        <li><a href="global-services.html#ar-and-ap-management">AR & AP Management</a></li>
+        <li><a href="global-services.html#outsourcing-bookkeeping-services">Outsourcing Bookkeeping Services</a></li>
+        <li><a href="global-services.html#accounting-services">Accounting Services</a></li>
+        <li><a href="global-services.html#year-end-services">Year End Services</a></li>
+        <li><a href="global-services.html#financial-statement-preparation">Financial Statement Preparation</a></li>
+        <li><a href="global-services.html#audit-support-staff">Audit Support Staff</a></li>
+        <li><a href="global-services.html#outsourced-tax-preparations">Outsourced Tax Preparations</a></li>
+        <li><a href="global-services.html#cost-operations-analysis">Cost Operations Analysis</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Services for CPAs</h4>
+      <ul>
+        <li><a href="cpa-firm-hire.html#bookkeeping-expert">Bookkeeping Expert</a></li>
+        <li><a href="cpa-firm-hire.html#staff-accountant">Staff Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#senior-accountant">Senior Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#tax-preparer">Tax Preparer</a></li>
+        <li><a href="cpa-firm-hire.html#audit-support-staff">Audit Support Staff</a></li>
+        <li><a href="cpa-firm-hire.html#arap-billing-specialist">AR/AP Billing Specialist</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-cfo">Virtual CFO</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-assistant">Virtual Assistant</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="text-align:center; padding:15px; background:#002244; margin:0;">
+    &copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.
+  </p>
+</footer>
    <script>
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
