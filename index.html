@@ -746,13 +746,13 @@ footer {
   margin-top: 40px;
 }
 .footer-wrapper {
-  max-width: 900px; 
+  max-width: 1200px; 
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px 20px;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 40px 30px;
   text-align: left;
 }    
     
@@ -768,12 +768,13 @@ footer {
 
 .footer-column {
   flex: 1 1 220px;
-  margin: 10px;
+  min-width: 220px;
 }
 
 .footer-column h4 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #ffcc00;
+  font-size: 1.2rem;
 }
 
 .footer-column ul {
@@ -783,27 +784,34 @@ footer {
 }
 
 .footer-column ul li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .footer-column ul li a {
   color: white;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
 }
 
-.footer-certifications .cert-logos {
+.cert-logos {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 8px;
 }
-
-.footer-certifications .cert-logos img {
+.cert-logos img {
+  max-height: 50px; 
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+    
+.cert-logos img {
   max-height: 40px;
   background: white;
   padding: 4px;
@@ -817,9 +825,9 @@ footer {
 .footer-bottom {
   text-align: center;
   background: #002244;
-  padding: 12px;
+  padding: 14px;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 </style>
@@ -905,10 +913,9 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
     <div class="footer-column">
       <h4>Certifications</h4>
       <div class="cert-logos">
-        <img src="quickbooks-cert.png" alt="QuickBooks Certification">
-        <img src="quickbooks-lv1.png" alt="QuickBooks Level 1">
-        <img src="quickbooks-lv2.png" alt="QuickBooks Level 2">
-        <img src="xero-advisor.png" alt="Xero Advisor">
+        <img src="Quickbooks Lv 1.png" alt="QuickBooks Level 1">
+        <img src="Quickbooks Lv 2.png" alt="QuickBooks Level 2">
+        <img src="XERO.png" alt="Xero Advisor">
       </div>
     </div>
   </div>
