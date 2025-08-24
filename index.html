@@ -799,7 +799,6 @@ footer {
   text-decoration: underline;
 }
 
-/* Certifications section */
 .footer-certifications {
   flex: 2 1 400px;   
   text-align: center;
@@ -833,11 +832,34 @@ footer {
 }
 
 .footer-bottom {
-  text-align: center;
   background: #002244;
-  padding: 14px;
+  color: white;
+  padding: 14px 30px;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-left {
+  text-align: left;
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-bottom-right a {
+  color: #ffcc00;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.footer-bottom-right a:hover {
+  color: white;
 }
 .footer-contact p {
   margin: 8px 0;
@@ -978,10 +1000,19 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
   <p>📞 IND: +91 88789 00171</p>
   <p>✉️ <a href="mailto:info@globalaccountingandbookkeeping.com.mx">info@globalaccountingandbookkeeping.com.mx</a></p>
 </div>
-
   </div>
 
-  <p class="footer-bottom">&copy; 2025 Global Accounting & Bookkeeping Services. All rights reserved.</p>
+<div class="footer-bottom">
+  <div class="footer-bottom-left">
+    © 2025 Global Accounting & Bookkeeping Services. All rights reserved.
+  </div>
+  <div class="footer-bottom-right">
+    <a href="https://www.linkedin.com/yourpage" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
 </footer>
    <script>
   function toggleMenu() {
