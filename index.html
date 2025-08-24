@@ -875,7 +875,26 @@ footer {
 .footer-contact a:hover {
   text-decoration: underline;
 }
+.footer-contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
 
+.footer-contact .contact-item a {
+  color: #ffcc00; /* yellow link */
+  text-decoration: none;
+}
+
+.footer-contact .contact-item a:hover {
+  text-decoration: underline;
+}
+
+    
+    
 </style>
   <section id="why-us">
     <h2>Why Partner With Us</h2>
@@ -995,12 +1014,18 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
       </ul>
     </div>
 
-    <div class="footer-column footer-contact">
+   <div class="footer-column footer-contact">
   <h4>Contact</h4>
-  <p>📞 IND: +91 88789 00171</p>
-  <p>✉️ <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">hireaccountant@globalaccountingandbookkeeping.com.mx</a></p>
+  <p class="contact-item">
+    <span class="icon">📞</span> IND: +91 88789 00171
+  </p>
+  <p class="contact-item">
+    <span class="icon">✉️</span>
+    <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">
+      hireaccountant@globalaccountingandbookkeeping.com.mx
+    </a>
+  </p>
 </div>
-  </div>
 
 <div class="footer-bottom">
   <div class="footer-bottom-left">
