@@ -32,335 +32,920 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI" media="print" onload="this.media='all'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-</head>
-<body>
+
   <style>
+    /* ===== RESET & BASE ===== */
     html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fcff;
-      color: #2e1a1a;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      color: #1a2744;
+      font-size: 16px;
+      line-height: 1.6;
     }
-     .talk-expert-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ffcc00;
-  color: #003366;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.talk-expert-btn:hover {
-  background-color: #ffc107;
-  transform: translateY(-2px);
-}
-    .floating-contact-btn {
-  position: fixed;
-  bottom: 100px; 
-  right: 20px;
-  background: #003366;
-  color: #ffffff;
-  padding: 12px 18px;
-  border-radius: 40px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  text-decoration: none;
-  z-index: 1001;
-}
-.floating-contact-btn:hover, .floating-cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
+    /* ===== NAVIGATION ===== */
+    nav {
+      background: #003366;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    nav.sticky-nav {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      width: 100%;
+    }
+    .logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links li { list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .nav-links a.active {
+      color: #ffcc00;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    .highlight-call-link {
+      background-color: #ffcc00 !important;
+      color: #003366 !important;
+      padding: 8px 16px !important;
+      border-radius: 5px;
+      font-weight: 700 !important;
+      margin-left: 4px;
+    }
+    .highlight-call-link:hover {
+      background-color: #e6b800 !important;
+      color: #003366 !important;
+    }
+    .highlight-hire {
+      background-color: #e6f7ff;
+      color: #003366;
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1001;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links li { text-align: center; padding: 10px 0; }
+      .hamburger { display: block; }
+    }
+
+    /* ===== HERO SECTION ===== */
+    header#main-header {
+      background: linear-gradient(135deg, rgba(0,20,60,0.82) 0%, rgba(0,51,102,0.75) 100%),
+                  url('background.jpg') no-repeat center center;
       background-size: cover;
       color: #fff;
-      padding: 80px 20px;
+      padding: 160px 24px 100px;
       text-align: center;
-      transition: padding 0.3s ease;
+      margin-top: 0;
     }
-   nav {
-  background: #003366;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-    nav.sticky-nav {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transform: scaleY(0.95);
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
-    nav a {
-      color: white;
-      margin: 0 20px;
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(255,204,0,0.15);
+      border: 1px solid rgba(255,204,0,0.5);
+      color: #ffcc00;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    header#main-header h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero-subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-btn-primary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #ffcc00;
+      color: #003366;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.2s;
     }
-    nav a.active {
-      border-bottom: 2px solid #ffcc00;
+    .hero-btn-primary:hover {
+      background: #e6b800;
+      transform: translateY(-2px);
     }
-    nav a:hover {
-      text-decoration: underline;
+    .hero-btn-secondary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
     }
+    .hero-btn-secondary:hover {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: #003366;
+      color: #fff;
+      padding: 28px 24px;
+    }
+    .stats-bar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 0 16px;
+    }
+    .stat-value {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffcc00;
+      line-height: 1.1;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+    }
+    @media (max-width: 600px) {
+      .stat-divider { display: none; }
+      .stats-bar-inner { gap: 12px; }
+    }
+
+    /* ===== CERTIFICATIONS BAR ===== */
+    .certifications-section {
+      background: #fff;
+      border-bottom: 1px solid #e5eaf2;
+      padding: 40px 24px;
+    }
+    .certifications-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .certifications-inner h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4a5568;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 24px;
+    }
+    .cert-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .cert-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .cert-badge img {
+      height: 72px;
+      width: auto;
+      background: #fff;
+      padding: 10px;
+      border: 2px solid #e5eaf2;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .cert-badge img:hover {
+      box-shadow: 0 4px 16px rgba(0,51,102,0.15);
+      transform: translateY(-3px);
+    }
+    .cert-badge span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #003366;
+      text-align: center;
+    }
+
+    /* ===== GENERAL SECTIONS ===== */
     section {
-      padding: 40px 20px;
+      padding: 60px 24px;
       max-width: 1000px;
       margin: auto;
     }
     section h2 {
       color: #003366;
-      margin-bottom: 10px;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    /* ===== SOFTWARE SUPPORT ===== */
+    .software-support {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+      border-bottom: 1px solid #e5eaf2;
+    }
+    .software-support h2 {
+      color: #003366;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 28px;
+      color: #4a5568;
+    }
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+    }
+    .software-item { text-align: center; }
+    .software-item img {
+      height: 50px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: grayscale(30%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    .software-item img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.08);
+    }
+    .software-item p {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #4a5568;
+      font-weight: 500;
+    }
+
+    /* ===== SERVICE TILES ===== */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
     .service-tile {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f5faff;
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      text-align: center;
+      transition: 0.25s;
+      border: 1px solid #e5eaf2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
-.service-tile h3 a,
-.service-tile a {
-  color: #003366;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .service-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,51,102,0.1);
+      border-color: #b3c7e6;
+    }
+    .service-tile h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+      color: #003366;
+      font-weight: 600;
+    }
+    .service-tile p {
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+    .service-tile a {
+      display: inline-block;
+      margin-top: 12px;
+      color: #003366;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .service-tile a:hover {
+      border-bottom-color: #003366;
+    }
+    .service-tile h3 a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .service-tile h3 a:hover {
+      color: #001f3f;
+    }
 
-.service-tile h3 a:hover,
-.service-tile a:hover {
-  text-decoration: underline;
-  color: #001f3f;
-}
-    .button-group a,
-    .cta a,
-    button {
-      padding: 12px 24px;
+    /* ===== TALK EXPERT BUTTON ===== */
+    .talk-expert-btn {
+      display: inline-block;
+      padding: 10px 20px;
       background-color: #003366;
       color: #fff;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-top: 10px;
+      transition: background-color 0.2s, transform 0.2s;
     }
-    .button-group a:hover,
-    .cta a:hover,
-    button:hover {
+    .talk-expert-btn:hover {
       background-color: #001f3f;
+      transform: translateY(-2px);
     }
-    .founder-img {
-      max-width: 200px;
+
+    /* ===== WHY US / ABOUT ===== */
+    #why-us ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    #why-us ul li {
+      padding: 16px 20px 16px 48px;
+      background: #fff;
+      border: 1px solid #e5eaf2;
       border-radius: 8px;
-      margin-bottom: 20px;
+      position: relative;
+      font-size: 0.97rem;
+      color: #2d3748;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    #why-us ul li::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ffcc00;
+      border: 2px solid #003366;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta {
+      text-align: center;
+      margin-top: 0;
+      background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+      padding: 60px 24px;
+      border-radius: 0;
+      color: #fff;
+    }
+    .cta h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #ffcc00;
+      color: #003366;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta a:hover {
+      background: #e6b800;
+      transform: translateY(-2px);
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    #contact h2 { margin-bottom: 8px; }
+    #contact > p { color: #4a5568; margin-bottom: 24px; }
+    .response-commitment {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1b5e20;
+      margin-bottom: 24px;
+    }
+    .response-commitment::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4caf50;
+      flex-shrink: 0;
     }
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 14px;
+      max-width: 560px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: #2d3748;
+      margin-bottom: 2px;
     }
     input, select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      padding: 12px 14px;
+      border: 1.5px solid #d1d9e6;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #1a2744;
+      background: #fff;
+      transition: border-color 0.2s;
     }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #003366;
+    }
+    form button[type="submit"] {
+      padding: 13px 28px;
+      background: #003366;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      font-family: inherit;
+      align-self: flex-start;
+    }
+    form button[type="submit"]:hover {
+      background: #001f3f;
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOUNDER SECTION ===== */
+    .founder-img {
+      max-width: 180px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    /* ===== FLOATING ELEMENTS ===== */
+    .floating-contact-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      background: #003366;
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      text-decoration: none;
+      z-index: 1001;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .floating-contact-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    .floating-cta {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background: #ffcc00;
+      color: #003366;
+      padding: 14px 18px;
+      border-radius: 10px 0 0 10px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 0 12px rgba(255, 204, 0, 0.5);
+      text-decoration: none;
+      z-index: 1001;
+      transition: all 0.3s ease;
+    }
+    .floating-cta:hover {
+      background: #e6b800;
+      box-shadow: 0 0 18px rgba(255, 204, 0, 0.8);
+    }
+    body.menu-open .floating-cta { display: none !important; }
+
+    /* ===== LEFT EMAIL FORM ===== */
+    .left-email-form {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background-color: #003366;
+      color: white;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      z-index: 1003;
+      width: 240px;
+      font-family: inherit;
+    }
+    .left-email-form h4 {
+      margin: 0 0 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .left-email-form input[type="email"] {
+      width: 100%;
+      padding: 9px 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      background-color: white;
+      color: #1a2744;
+    }
+    .left-email-form button {
+      width: 100%;
+      padding: 9px;
+      background-color: #ffcc00;
+      color: #003366;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      transition: background-color 0.2s;
+      font-family: inherit;
+    }
+    .left-email-form button:hover { background-color: #e6b800; }
+    .floating-email-toggle {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      left: 20px;
+      background-color: #003366;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 1003;
+    }
+    @media (max-width: 768px) {
+      .left-email-form { display: none; }
+      .floating-email-form.show { display: block; }
+      .floating-email-toggle { display: block; }
+    }
+
+    /* ===== FOOTER ===== */
     footer {
       background: #003366;
       color: white;
-      text-align: center;
-      padding: 20px;
+      margin-top: 0;
     }
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-      background-color: #e6f2ff;
-      padding: 40px 20px;
-      border-radius: 8px;
+    .footer-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 50px 30px 30px;
+      text-align: left;
     }
-    .floating-cta {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: #ffcc00;
-  color: #003366;
-  padding: 14px 20px;
-  border-radius: 10px 0 0 10px;
-  font-weight: bold;
-  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
-  text-decoration: none;
-  z-index: 1001;
-  transition: all 0.3s ease;
-  animation: pulseGlow 2s infinite;
-}
-
-.floating-cta:hover {
-  background: #ffc107;
-  box-shadow: 0 0 16px rgba(255, 204, 0, 0.9);
-}
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
-  }
-  50% {
-    box-shadow: 0 0 16px rgba(255, 204, 0, 1);
-  }
-  100% {
-    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
-  }
-}
-
-    @media (max-width: 768px) {
-      nav { flex-direction: column; }
+    .footer-column { flex: 1 1 200px; min-width: 180px; }
+    .footer-column h4 {
+      margin-bottom: 14px;
+      color: #ffcc00;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
-    .highlight-call-link {
-      background-color: #ffcc00;
-      color: #003366 !important;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-left: 10px;
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .highlight-call-link:hover {
-      background-color: #ffc107;
+    .footer-column ul li { margin-bottom: 9px; }
+    .footer-column ul li a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+    .footer-column ul li a:hover { color: #fff; }
+    .footer-contact p, .footer-contact .contact-item {
+      margin: 8px 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.8);
+    }
+    .footer-contact .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-contact a {
+      color: #ffcc00;
       text-decoration: none;
     }
-.highlight-hire 
-    {
-      background-color: #e6f7ff;
+    .footer-contact a:hover { text-decoration: underline; }
+    .footer-bottom {
+      background: #002244;
+      color: rgba(255,255,255,0.75);
+      padding: 16px 30px;
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom-right {
+      display: flex;
+      gap: 18px;
+    }
+    .footer-bottom-right a {
+      color: #ffcc00;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+    .footer-bottom-right a:hover { color: white; }
+    .footer-bottom-right .social-icon {
+      height: 28px;
+      width: auto;
+      transition: transform 0.2s;
+    }
+    .footer-bottom-right .social-icon:hover { transform: scale(1.1); }
+
+    /* ===== SERVICES SECTION HEADINGS ===== */
+    .section-heading {
+      text-align: center;
+      font-size: 1.9rem;
       color: #003366;
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 8px;  
-} 
-.logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .section-subheading {
+      text-align: center;
+      color: #4a5568;
+      margin-bottom: 32px;
+      font-size: 1rem;
+    }
+    .services-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 36px;
+    }
+    .services-col {
+      flex: 1;
+      min-width: 300px;
+    }
+    .services-col-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .services-col-header h3 {
+      font-size: 1.15rem;
+      color: #003366;
+      font-weight: 700;
+      margin: 0;
+    }
+    .services-col-header h3 a {
+      color: #003366;
+      text-decoration: none;
+    }
+    .services-col-header h3 a:hover { text-decoration: underline; }
 
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: white;
-  background: none;
-  border: none;
-}
-    .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
- .nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  white-space: nowrap;
-  overflow-x: auto;
-   list-style: none;
-   margin: 0;
-  padding: 0;
-}
-    .nav-links::-webkit-scrollbar {
-  display: none;
-}
-    .nav-links li {
-  list-style: none;
-}
-  .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #003366;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1001;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: #003366;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1001;
-  }
-
-   .nav-links.show {
-    display: flex;
-  }
-    .hamburger {
-    display: block;
-  }
-}
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
+    @media (max-width: 768px) {
+      header#main-header { padding: 130px 20px 80px; }
+      .stats-bar-inner { justify-content: center; }
+      .hero-cta-group { flex-direction: column; align-items: center; }
+      section { padding: 40px 20px; }
+    }
   </style>
 </head>
- <body>
-<header id="main-header">
-  <h1>Global Accounting & Bookkeeping Services</h1>
-  <p>Global Expertise in Accounting, Bookkeeping, Tax, Audit & Compliance</p>
-</header>
+<body>
 
-
- <nav id="main-nav">
+<!-- NAVIGATION -->
+<nav id="main-nav">
   <div class="nav-container">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <span class="logo">Global Accounting & Bookkeeping</span>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
     <ul class="nav-links" id="navLinks">
-  <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="index.html#about">About Us</a></li>
-  <li><a href="global-services.html">Services for Businesses</a></li>
-  <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
-  <li><a href="india-services.html">India Services</a></li>
-  <li><a href="careers.html">Careers</a></li>
-  <li><a href="book-a-call.html" class="highlight-call-link">Book a Call</a></li>
-</ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="global-services.html">Services for Businesses</a></li>
+      <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
+      <li><a href="india-services.html">India Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="book-a-call.html" class="highlight-call-link">Book a Call</a></li>
+    </ul>
   </div>
 </nav>
+
+<!-- FLOATING LEFT EMAIL FORM -->
 <div class="left-email-form">
   <form action="https://formspree.io/f/mwpbgdok" method="POST">
-    <h4>Let’s Discuss Your Accounting Needs</h4>
-    <input 
-      type="email" 
-      name="email" 
-      placeholder="Your Email Address" 
+    <h4>Let's Discuss Your Accounting Needs</h4>
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email Address"
       required
     >
     <button type="submit">Connect with Us</button>
   </form>
 </div>
 
-<section id="services">
-  <section class="software-support">
-  <h2>Softwares We Support</h2>
+<!-- HERO SECTION -->
+<header id="main-header">
+  <div class="hero-content">
+    <span class="hero-eyebrow">CA-Led Global Accounting Firm</span>
+    <h1>Precision Accounting &amp; Bookkeeping<br>That Scales Your Business</h1>
+    <p class="hero-subheadline">
+      Offshore accounting expertise trusted by CPA firms and growing businesses across the US, UK, Australia, and India — audit-ready, compliant, and built for scale.
+    </p>
+    <div class="hero-cta-group">
+      <a href="book-a-call.html" class="hero-btn-primary">Schedule a Call</a>
+      <a href="contact-us.html" class="hero-btn-secondary">Talk to an Expert</a>
+      <a href="#contact" class="hero-btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <span class="stat-value">CA-Led</span>
+      <span class="stat-label">Team</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-value">5+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Countries Served</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-value">GAAP &amp; IFRS</span>
+      <span class="stat-label">Expertise</span>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS (PROMINENT) -->
+<div class="certifications-section">
+  <div class="certifications-inner">
+    <h2>Our Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-badge">
+        <img src="Quickbooks-Lv-1.png" alt="QuickBooks Level 1 Certified">
+        <span>QuickBooks L1</span>
+      </div>
+      <div class="cert-badge">
+        <img src="Quickbooks-Lv-2.png" alt="QuickBooks Level 2 Certified">
+        <span>QuickBooks L2</span>
+      </div>
+      <div class="cert-badge">
+        <img src="XERO.png" alt="Xero Advisor Certified">
+        <span>Xero Advisor</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOFTWARE SUPPORT -->
+<div class="software-support">
+  <h2>Software We Support</h2>
   <div class="software-grid">
     <div class="software-item">
       <img src="quickbooks-logo.png" alt="QuickBooks" />
@@ -375,7 +960,7 @@
       <p>Zoho Books</p>
     </div>
     <div class="software-item">
-      <img src="sageintacct -logo.png" alt="Sage" />
+      <img src="sageintacct-logo.png" alt="Sage Intacct" />
       <p>Sage</p>
     </div>
     <div class="software-item">
@@ -383,34 +968,38 @@
       <p>NetSuite</p>
     </div>
     <div class="software-item">
-      <img src="freshbooks- logo.png" alt="FreshBooks" />
-      <p>Freshbooks</p>
+      <img src="freshbooks-logo.png" alt="FreshBooks" />
+      <p>FreshBooks</p>
     </div>
   </div>
-</section>
-  <h2 style="text-align:center; font-size: 2rem; color:#003366;">🌍 GLOBAL SERVICES</h2>
+</div>
 
-  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
-    <div style="flex: 1; min-width: 300px;">
-      <h3 style="text-align: center; color: #003366;">
-        <a href="global-services.html#business-owners" style="color: #003366; text-decoration: none;">For Business Owners</a>
-           <a href="contact-us.html" class="talk-expert-btn">📞 Talk to an Expert</a>
-      </h3>
+<!-- SERVICES SECTION -->
+<section id="services">
+  <h2 class="section-heading">Global Services</h2>
+  <p class="section-subheading">Expert accounting support for businesses and CPA firms worldwide</p>
+
+  <div class="services-wrapper">
+    <div class="services-col">
+      <div class="services-col-header">
+        <h3><a href="global-services.html#business-owners">For Business Owners</a></h3>
+        <a href="contact-us.html" class="talk-expert-btn">Talk to an Expert</a>
+      </div>
       <div class="service-grid">
         <div class="service-tile">
-          <a href="global-services.html#bookkeeping"><h3>Bookkeeping & Accounting</h3>
+          <a href="global-services.html#bookkeeping"><h3>Bookkeeping &amp; Accounting</h3>
             <p>Clean and audit-ready monthly books.</p>
             <div><a href="global-services.html#bookkeeping">Read More</a></div>
           </a>
         </div>
         <div class="service-tile">
-          <a href="global-services.html#monthly-reports"><h3>Year-end services</h3>
-            <p>Accurate closing entries & reports.</p>
+          <a href="global-services.html#monthly-reports"><h3>Year-end Services</h3>
+            <p>Accurate closing entries &amp; reports.</p>
             <div><a href="global-services.html#reporting">Read More</a></div>
           </a>
         </div>
         <div class="service-tile">
-          <a href="global-services.html#business-owners"><h3>Tax & Audit Support</h3>
+          <a href="global-services.html#business-owners"><h3>Tax &amp; Audit Support</h3>
             <p>From filings to audit documentation.</p>
             <div><a href="global-services.html#business-owners">Read More</a></div>
           </a>
@@ -418,21 +1007,21 @@
       </div>
     </div>
 
-    <div style="flex: 1; min-width: 300px;">
-      <h3 style="text-align: center; color: #003366;">
-        <a href="cpa-firm-hire.html#hire-dedicated" style="color: #003366; text-decoration: none;">For CPA Firms</a>
-              <a href="contact-us.html" class="talk-expert-btn">📞 Inquire Now</a>
-      </h3>
+    <div class="services-col">
+      <div class="services-col-header">
+        <h3><a href="cpa-firm-hire.html#hire-dedicated">For CPA Firms</a></h3>
+        <a href="contact-us.html" class="talk-expert-btn">Inquire Now</a>
+      </div>
       <div class="service-grid">
         <div class="service-tile">
-          <a href="cpa-firm-hire.html#taxprep"><h3>Staff Bookkeeper & Accountant</h3>
-            <p>Hire accountant & bookkeeping expert for clean records.</p>
+          <a href="cpa-firm-hire.html#taxprep"><h3>Staff Bookkeeper &amp; Accountant</h3>
+            <p>Hire accounting &amp; bookkeeping experts for clean records.</p>
             <div><a href="cpa-firm-hire.html#taxprep">Read More</a></div>
           </a>
         </div>
         <div class="service-tile">
           <a href="cpa-firm-hire.html#audit"><h3>Audit Support</h3>
-            <p>Support for PBCs & Testing Docs by expert team.</p>
+            <p>Support for PBCs &amp; testing docs by expert team.</p>
             <div><a href="cpa-firm-hire.html#audit">Read More</a></div>
           </a>
         </div>
@@ -446,548 +1035,113 @@
     </div>
   </div>
 
-  <h2 style="margin-top:60px; color:#003366;font-size: 2rem; text-align:center;"><a href="india-services.html">🇮🇳 INDIA SERVICES</h2>
-  <a href="contact-us.html" class="talk-expert-btn">📞 Get India Support</a>
+  <h2 class="section-heading" style="margin-top:60px;">India Services</h2>
+  <p class="section-subheading">GST, Income Tax, and Compliance Services for Indian Businesses</p>
+  <div style="text-align:center; margin-bottom: 20px;">
+    <a href="contact-us.html" class="talk-expert-btn">Get India Support</a>
+  </div>
   <div class="service-grid">
     <div class="service-tile">
       <a href="india-services.html#gst">
         <h3>GST Related Services</h3>
-        <p>Comprehensive GST Solutions — Filing, Compliance, Advisory & More.</p>
+        <p>Comprehensive GST solutions — filing, compliance, advisory &amp; more.</p>
         <div>Read More</div>
       </a>
     </div>
     <div class="service-tile">
       <a href="india-services.html#tax">
         <h3>Income Tax Services</h3>
-        <p>ITR Filing, TDS, Form 16/26AS & Compliance.</p>
+        <p>ITR filing, TDS, Form 16/26AS &amp; compliance.</p>
         <div>Read More</div>
       </a>
     </div>
     <div class="service-tile">
       <a href="india-services.html#payroll">
-        <h3>Accounting & Bookkeeping</h3>
-        <p>Accurate Bookkeeping & Timely Accounting for Audit-Ready Records.</p>
+        <h3>Accounting &amp; Bookkeeping</h3>
+        <p>Accurate bookkeeping &amp; timely accounting for audit-ready records.</p>
         <div>Read More</div>
       </a>
     </div>
   </div>
 </section>
-  <style>
- .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
 
-.service-tile {
-  background: #f5faff;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: 0.3s;
-  border: 1px solid #ccc;
-}
+<!-- WHY US -->
+<section id="why-us">
+  <h2>Why Partner With Us</h2>
+  <ul>
+    <li>Led by a Chartered Accountant with proven expertise in global audits and financial systems integration</li>
+    <li>Enables CPA firms and businesses to scale by freeing up resources for high-impact, client-facing work</li>
+    <li>Delivers consistently accurate, audit-ready outputs aligned with U.S. GAAP, Indian standards, and IFRS</li>
+    <li>Drives results through structured workflows, review mechanisms, and strong process ownership</li>
+    <li>Committed to timely delivery with clear SLAs and proactive communication at every step</li>
+  </ul>
+</section>
 
-.service-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Our Firm</h2>
+  <p>We are a globally-focused accounting and compliance firm that partners with CPA firms, business owners, and growing enterprises across the U.S., UK, Australia, and beyond. Our services are built to help you scale — whether you're seeking a reliable offshore team to support your accounting practice, or a business owner aiming to streamline your financial operations. From audit-ready bookkeeping to tax compliance and virtual CFO support, we deliver clarity, efficiency, and peace of mind. Our clients trust us for timely, accurate, and professional finance solutions tailored to cross-border needs.</p>
+</section>
 
-.service-tile h3 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  color: #003366;
-}
+<!-- FOUNDER -->
+<section id="founder">
+  <h2>Meet the Founder</h2>
+  <img src="Dinesh-Talreja-Picture-updated.jpg" alt="Dinesh Talreja" class="founder-img" />
+  <p>I am Dinesh Talreja, a Chartered Accountant with deep experience in global audits, financial reporting, and systems implementation. Having worked with international audit firms and supported finance teams across the U.S., India, and other regions, I've seen firsthand how complex and fragmented financial operations can hinder business growth.
 
-.service-tile p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.service-tile a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #003366;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.service-tile a:hover {
-  color: #001f3f;
-  text-decoration: underline;
-}
-
-  @keyframes subtle-pulse {
-    0% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.1); }
-    50% { box-shadow: 0 0 10px rgba(0, 51, 102, 0.3); }
-    100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.1); }
-  }
-   .left-email-form {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  background-color: #003366; /* Deep blue */
-  color: white;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 1003;
-  width: 240px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.left-email-form h4 {
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.left-email-form input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  background-color: white;
-  color: black;
-}
-
-.left-email-form button {
-  width: 100%;
-  padding: 8px;
-  background-color: #ffcc00;
-  color: #003366;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.left-email-form button:hover {
-  background-color: #ffc107;
-}
-    .floating-email-toggle {
-  display: none;
-  position: fixed;
-  bottom: 100px;
-  left: 20px;
-  background-color: #003366;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 40px;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  cursor: pointer;
-  z-index: 1003;
-}
-@media (max-width: 768px) {
-  .left-email-form {
-    display: none;
-  }
-  .floating-email-form.show {
-    display: block;
-  }
-  .floating-email-toggle {
-    display: block;
-  }
-}   
-    .software-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.software-item {
-  text-align: center;
-  flex: 1 1 100px;
-}
-
-.software-item img {
-  width: 80px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.software-item img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.software-item p {
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #333;
-}
-    .software-logos {
-  text-align: center;
-  padding: 40px 20px 10px;
-  background-color: #f9fcff;
-}
-
-.software-logos p {
-  font-weight: bold;
-  color: #003366;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.logos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-.logos-container img {
-  height: 40px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.logos-container img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
-}
-    .software-support {
-  max-width: 1200px;
-  margin: 60px auto 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.software-support h2 {
-  color: #003366;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-}
-
-.software-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  align-items: center;
-  justify-items: center;
-}
-
-.software-item {
-  text-align: center;
-}
-
-.software-item img {
-  height: 50px;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.software-item p {
-  font-size: 0.85rem;
-  color: #003366;
-  margin-top: 6px;
-}
-.left-email-form {
-  position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  background-color: #003366;
-  color: white;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 1003;
-  width: 240px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.left-email-form h4 {
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.left-email-form input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.left-email-form button {
-  width: 100%;
-  padding: 8px;
-  background-color: #ffcc00;
-  color: #003366;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.left-email-form button:hover {
-  background-color: #ffc107;
-}
-@media (max-width: 768px) {
-  .left-email-form {
-    display: none;
-  }
-}
- body.menu-open .floating-cta {
-  display: none !important;
-}
-footer {
-  background: #003366;
-  color: white;
-  margin-top: 40px;
-}
-
-.footer-wrapper {
-  max-width: 1200px; 
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 40px 30px;
-  text-align: left;
-}    
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 40px 20px;
-  background-color: #003366;
-  color: white;
-  text-align: left;
-}
-
-.footer-column {
-  flex: 1 1 220px;
-  min-width: 220px;
-}
-
-.footer-column h4 {
-  margin-bottom: 12px;
-  color: #ffcc00;
-  font-size: 1.3rem; 
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.05rem; 
-  line-height: 1.6;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-certifications {
-  flex: 2 1 400px;   
-  text-align: center;
-}
-
-.footer-certifications h4 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-}
-
-.cert-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.cert-logos img {
-  height: 80px; 
-  width: auto;
-  background: white;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
-}
-
-.services-footer {
-  border-top: 1px solid #446;
-  margin-top: 20px;
-}
-
-.footer-bottom {
-  background: #002244;
-  color: white;
-  padding: 14px 30px;
-  margin: 0;
-  font-size: 0.95rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer-bottom-left {
-  text-align: left;
-}
-
-.footer-bottom-right {
-  display: flex;
-  gap: 18px;
-}
-
-.footer-bottom-right a {
-  color: #ffcc00;
-  font-size: 1.3rem;
-  text-decoration: none;
-}
-
-.footer-bottom-right a:hover {
-  color: white;
-}
-.footer-contact p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.footer-contact a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
-  text-decoration: underline;
-}
-.footer-contact .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* space between icon and text */
-  margin: 6px 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.footer-contact .contact-item a {
-  color: #ffcc00; /* yellow link */
-  text-decoration: none;
-}
-
-.footer-contact .contact-item a:hover {
-  text-decoration: underline;
-}
-.footer-bottom-right .social-icon {
-  height: 28px;  
-  width: auto;
-  transition: transform 0.2s ease-in-out;
-}
-
-.footer-bottom-right .social-icon:hover {
-  transform: scale(1.1);
-}
-footer {
-  padding-left: 120px; 
-}
-
-@media (max-width: 768px) {
-  footer {
-    padding-left: 80px; 
-  }
-}
-    @media (max-width: 1600px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-}
-    
-    
-</style>
-  <section id="why-us">
-    <h2>Why Partner With Us</h2>
-    <ul>
-      <li>Led by a Chartered Accountant with proven expertise in global audits and financial systems integration</li>
-      <li>Enables CPA firms and businesses to scale by freeing up resources for high-impact, client-facing work</li>
-      <li>Delivers consistently accurate, audit-ready outputs aligned with U.S. GAAP, Indian standards, and IFRS</li>
-      <li>Drives results through structured workflows, review mechanisms, and strong process ownership</li>
-      <li>Committed to timely delivery with clear SLAs and proactive communication at every step</li>
-    </ul>
-  </section>
-
-  <section id="about">
-    <h2>About Our Firm</h2>
-    <p>We are a globally-focused accounting and compliance firm that partners with CPA firms, business owners, and growing enterprises across the U.S., UK, Australia, and beyond. Our services are built to help you scale — whether you're seeking a reliable offshore team to support your accounting practice, or a business owner aiming to streamline your financial operations. From audit-ready bookkeeping to tax compliance and virtual CFO support, we deliver clarity, efficiency, and peace of mind. Our clients trust us for timely, accurate, and professional finance solutions tailored to cross-border needs.</p>
-  </section>
-
-  <section id="founder">
-    <h2>Meet the Founder</h2>
-    <img src="Dinesh Talreja Picture updated.jpg" alt="Dinesh Talreja" class="founder-img" />
-    <p>I am Dinesh Talreja, a Chartered Accountant with deep experience in global audits, financial reporting, and systems implementation. Having worked with international audit firms and supported finance teams across the U.S., India, and other regions, I’ve seen firsthand how complex and fragmented financial operations can hinder business growth.
-
-That’s why I launched Global Accounting & Bookkeeping Services — to provide high-quality, scalable, and audit-ready finance solutions that let CPA firms and business owners focus on what they do best. My vision is to build a trusted offshore finance partner that blends technical precision with global best practices, enabling businesses to grow confidently across borders.
+That's why I launched Global Accounting &amp; Bookkeeping Services — to provide high-quality, scalable, and audit-ready finance solutions that let CPA firms and business owners focus on what they do best. My vision is to build a trusted offshore finance partner that blends technical precision with global best practices, enabling businesses to grow confidently across borders.
 </p>
-    <p><strong>– Dinesh Talreja, Founder & CEO</strong></p>
-    <p>Connect: <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank">LinkedIn</a></p>
-  </section>
+  <p><strong>– Dinesh Talreja, Founder &amp; CEO</strong></p>
+  <p>Connect: <a href="https://www.linkedin.com/in/ca-dinesh-talreja-590598106" target="_blank">LinkedIn</a></p>
+</section>
 
-  <section id="cta" class="cta">
-    <h2>Let's Get Started</h2>
-    <p>Book a <strong>free consultation</strong>...</p>
-    <a href="#contact">Schedule Now</a>
-  </section>
+<!-- CTA BANNER -->
+<section id="cta" class="cta">
+  <h2>Ready to Streamline Your Finances?</h2>
+  <p>Book a <strong>free consultation</strong> with our expert team and discover how we can help your business or CPA firm scale efficiently.</p>
+  <a href="#contact">Schedule a Call</a>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>You can reach us directly at <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">hireaccountant@globalaccountingandbookkeeping.com.mx</a></p>
-    <form action="https://formspree.io/f/meokyblp" method="POST">
-  <label>Name</label>
-  <input type="text" name="name" required />
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>You can reach us directly at <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">hireaccountant@globalaccountingandbookkeeping.com.mx</a></p>
 
-  <label>Email</label>
-  <input type="email" name="email" required />
+  <div class="response-commitment">We respond within 1 business day</div>
 
-  <label>Phone Number</label>
-  <input type="tel" name="phone" required />
+  <form action="https://formspree.io/f/meokyblp" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" required />
 
-  <label>Service Required</label>
-  <select name="service" required>
-    <option value="">Select a Service</option>
-    <option>Bookkeeping services</option>
-    <option>Accounting services (CPA Firm)</option>
-    <option>Tax services (CPA Firm)</option>
-    <option>Audit services</option>
-    <option>Year-end related</option>
-    <option>GST Services</option>
-    <option>Company services</option>
-  </select>
-  <input type="hidden" name="_redirect" value="https://globalaccountingandbookkeeping.com.mx/thank-you.html" />
-  <button type="submit">Submit</button>
-</form>
-  </section>
+    <label>Email</label>
+    <input type="email" name="email" required />
 
-  <a href="contact-us.html" class="floating-contact-btn">📬 Get a quote</a>
-  <a href="book-a-call.html" class="floating-cta">📞 Schedule a Call</a>
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required />
 
+    <label>Service Required</label>
+    <select name="service" required>
+      <option value="">Select a Service</option>
+      <option>Bookkeeping services</option>
+      <option>Accounting services (CPA Firm)</option>
+      <option>Tax services (CPA Firm)</option>
+      <option>Audit services</option>
+      <option>Year-end related</option>
+      <option>GST Services</option>
+      <option>Company services</option>
+    </select>
+    <input type="hidden" name="_redirect" value="https://globalaccountingandbookkeeping.com.mx/thank-you.html" />
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<a href="contact-us.html" class="floating-contact-btn">Get a Quote</a>
+<a href="book-a-call.html" class="floating-cta">Schedule a Call</a>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-wrapper">
-
     <div class="footer-column">
       <h4>Company</h4>
       <ul>
@@ -1000,70 +1154,57 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
     </div>
 
     <div class="footer-column">
-      <h4>Certifications</h4>
-      <div class="cert-logos">
-        <img src="Quickbooks Lv 1.png" alt="QuickBooks Level 1">
-        <img src="Quickbooks Lv 2.png" alt="QuickBooks Level 2">
-        <img src="XERO.png" alt="Xero Advisor">
-      </div>
+      <h4>Services for Business Owners</h4>
+      <ul>
+        <li><a href="global-services.html#ar-and-ap-management">AR &amp; AP Management</a></li>
+        <li><a href="global-services.html#bookkeeping-services">Bookkeeping Services</a></li>
+        <li><a href="global-services.html#accounting-services">Accounting Services</a></li>
+        <li><a href="global-services.html#year-end-services">Year End Services</a></li>
+        <li><a href="global-services.html#financial-statement-preparation">Financial Statement Preparation</a></li>
+        <li><a href="global-services.html#audit-support">Audit Support</a></li>
+        <li><a href="global-services.html#outsourced-tax-preparations">Outsourced Tax Preparations</a></li>
+        <li><a href="global-services.html#cost-operations-analysis">Cost Operations Analysis</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Services for CPAs</h4>
+      <ul>
+        <li><a href="cpa-firm-hire.html#bookkeeping-expert">Bookkeeping Expert</a></li>
+        <li><a href="cpa-firm-hire.html#staff-accountant">Staff Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#senior-accountant">Senior Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#tax-preparer">Tax Preparer</a></li>
+        <li><a href="cpa-firm-hire.html#audit-support-staff">Audit Support Staff</a></li>
+        <li><a href="cpa-firm-hire.html#arap-billing-specialist">AR/AP Billing Specialist</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-cfo">Virtual CFO</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-assistant">Virtual Assistant</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h4>Contact</h4>
+      <p class="contact-item">IND: +91 88789 00171</p>
+      <p class="contact-item">
+        <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">
+          hireaccountant@globalaccountingandbookkeeping.com.mx
+        </a>
+      </p>
     </div>
   </div>
 
-  <div class="footer-wrapper">
-    <div class="footer-column">
-  <h4>Services for Business Owners</h4>
-  <ul>
-    <li><a href="global-services.html#ar-and-ap-management">AR & AP Management</a></li>
-    <li><a href="global-services.html#bookkeeping-services">Bookkeeping Services</a></li>
-    <li><a href="global-services.html#accounting-services">Accounting Services</a></li>
-    <li><a href="global-services.html#year-end-services">Year End Services</a></li>
-    <li><a href="global-services.html#financial-statement-preparation">Financial Statement Preparation</a></li>
-    <li><a href="global-services.html#audit-support">Audit Support</a></li>
-    <li><a href="global-services.html#outsourced-tax-preparations">Outsourced Tax Preparations</a></li>
-    <li><a href="global-services.html#cost-operations-analysis">Cost Operations Analysis</a></li>
-  </ul>
-</div>
-
-<div class="footer-column">
-  <h4>Services for CPAs</h4>
-  <ul>
-    <li><a href="cpa-firm-hire.html#bookkeeping-expert">Bookkeeping Expert</a></li>
-    <li><a href="cpa-firm-hire.html#staff-accountant">Staff Accountant</a></li>
-    <li><a href="cpa-firm-hire.html#senior-accountant">Senior Accountant</a></li>
-    <li><a href="cpa-firm-hire.html#tax-preparer">Tax Preparer</a></li>
-    <li><a href="cpa-firm-hire.html#audit-support-staff">Audit Support Staff</a></li>
-    <li><a href="cpa-firm-hire.html#arap-billing-specialist">AR/AP Billing Specialist</a></li>
-    <li><a href="cpa-firm-hire.html#virtual-cfo">Virtual CFO</a></li>
-    <li><a href="cpa-firm-hire.html#virtual-assistant">Virtual Assistant</a></li>
-  </ul>
-</div>
-
-   <div class="footer-column footer-contact">
-  <h4>Contact</h4>
-  <p class="contact-item">
-    <span class="icon">📞</span> IND: +91 88789 00171
-  </p>
-  <p class="contact-item">
-    <span class="icon">✉️</span>
-    <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">
-      hireaccountant@globalaccountingandbookkeeping.com.mx
-    </a>
-  </p>
-</div>
-</div>
-  
-<div class="footer-bottom">
-  <div class="footer-bottom-left">
-  © Global Accounting & Bookkeeping Services. All rights reserved.
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      &copy; Global Accounting &amp; Bookkeeping Services. All rights reserved.
+    </div>
+    <div class="footer-bottom-right">
+      <a href="https://www.linkedin.com/company/global-accounting-and-bookkeeping-services/" target="_blank">
+        <img src="Linkedin.png" alt="LinkedIn" class="social-icon">
+      </a>
+    </div>
   </div>
-  <div class="footer-bottom-right">
-    <a href="https://www.linkedin.com/company/global-accounting-and-bookkeeping-services/" target="_blank">
-      <img src="Linkedin.png" alt="LinkedIn" class="social-icon">
-    </a>
-  </div>
-</div>
 </footer>
-   <script>
+
+<script>
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
     const isOpen = nav.classList.toggle("show");
@@ -1082,7 +1223,6 @@ That’s why I launched Global Accounting & Bookkeeping Services — to provide 
       if (url.includes(link.getAttribute('href'))) {
         link.classList.add('active');
       }
-
       link.addEventListener('click', () => {
         document.getElementById("navLinks").classList.remove("show");
         document.body.classList.remove("menu-open");
