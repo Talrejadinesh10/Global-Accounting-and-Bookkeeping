@@ -3,305 +3,584 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book a Call | Global Accounting</title>
+  <title>Book a Call | Global Accounting &amp; Bookkeeping</title>
+  <meta name="description" content="Schedule a free consultation call with Dinesh Talreja, CA &amp; Global Accounting Advisor. Discuss your accounting, bookkeeping, or compliance needs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
-    <style>
- html { scroll-behavior: smooth; }
+    /* ===== RESET & BASE ===== */
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fcff;
-      color: #2e1a1a;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      color: #1a2744;
+      font-size: 16px;
+      line-height: 1.6;
     }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-      transition: padding 0.3s ease;
-    }
-   nav {
-  background: #003366;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-    nav.sticky-nav {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transform: scaleY(0.95);
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a.active {
-      border-bottom: 2px solid #ffcc00;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      color: #003366;
-      margin-bottom: 20px;
-    }
-    .button-group a,
-    .cta a,
-    button {
-      padding: 12px 24px;
-      background-color: #003366;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-    .button-group a:hover,
-    .cta a:hover,
-    button:hover {
-      background-color: #001f3f;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-      background-color: #e6f2ff;
-      padding: 40px 20px;
-      border-radius: 8px;
-    }
-    .floating-cta {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: #ffcc00;
-  color: #003366;
-  padding: 14px 20px;
-  border-radius: 10px 0 0 10px;
-  font-weight: bold;
-  box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
-  text-decoration: none;
-  z-index: 1001;
-  transition: all 0.3s ease;
-  animation: pulseGlow 2s infinite;
-}
 
-    .highlight-call-link {
-      background-color: #ffcc00;
-      color: #003366 !important;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-left: 10px;
+    /* ===== NAVIGATION ===== */
+    nav {
+      background: #003366;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
-    .highlight-call-link:hover {
-      background-color: #ffc107;
+    nav.sticky-nav {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      width: 100%;
+    }
+    .logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links li { list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.9);
       text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
     }
-.highlight-hire 
-    {
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    .nav-links a.active { color: #ffcc00; }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    .highlight-call-link {
+      background-color: #ffcc00 !important;
+      color: #003366 !important;
+      padding: 8px 16px !important;
+      border-radius: 5px;
+      font-weight: 700 !important;
+      margin-left: 4px;
+    }
+    .highlight-call-link:hover { background-color: #e6b800 !important; }
+    .highlight-hire {
       background-color: #e6f7ff;
       color: #003366;
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: bold;
+      font-size: 0.7rem;
+      font-weight: 700;
       padding: 2px 6px;
       border-radius: 4px;
-      margin-left: 8px;  
-} 
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: white;
-  background: none;
-  border: none;
-}
-    .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
- .nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  white-space: nowrap;
-  overflow-x: auto;
-   list-style: none;
-   margin: 0;
-  padding: 0;
-}
-    .nav-links::-webkit-scrollbar {
-  display: none;
-}
-    .nav-links li {
-  list-style: none;
-}
-  .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+      margin-left: 6px;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1001;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links li { text-align: center; padding: 10px 0; }
+      .hamburger { display: block; }
+    }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #003366;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1001;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: #003366;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1001;
-  }
+    /* ===== HERO ===== */
+    header#main-header {
+      background: linear-gradient(135deg, rgba(0,20,60,0.85) 0%, rgba(0,51,102,0.78) 100%),
+                  url('background.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 140px 24px 80px;
+      text-align: center;
+      margin-top: 0;
+    }
+    .hero-content { max-width: 800px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(255,204,0,0.15);
+      border: 1px solid rgba(255,204,0,0.5);
+      color: #ffcc00;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    header#main-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero-subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.7;
+    }
 
-   .nav-links.show {
-    display: flex;
-  }
-    .hamburger {
-    display: block;
-  }
-}
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-    .calendly-container {
+    /* ===== TRUST SIGNALS BAR ===== */
+    .trust-bar {
+      background: #003366;
+      padding: 20px 24px;
+    }
+    .trust-bar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
       display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .trust-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,204,0,0.15);
+      border: 1px solid rgba(255,204,0,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .trust-item strong { color: #ffcc00; }
+
+    /* ===== BOOKING SECTION ===== */
+    #booking {
+      padding: 60px 24px;
+      background: #f7f9fc;
+    }
+    .booking-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .booking-wrapper { grid-template-columns: 1fr; }
+    }
+    .booking-info h2 {
+      font-size: 1.6rem;
+      color: #003366;
+      font-weight: 700;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+    .booking-info p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin: 0 0 28px;
+      line-height: 1.7;
+    }
+    .trust-cards { display: flex; flex-direction: column; gap: 14px; }
+    .trust-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
       align-items: flex-start;
-      padding: 40px 20px;
-      min-height: 700px;
+      gap: 14px;
+    }
+    .trust-card-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .trust-card h4 { font-size: 0.95rem; color: #003366; font-weight: 700; margin: 0 0 4px; }
+    .trust-card p { font-size: 0.85rem; color: #4a5568; margin: 0; line-height: 1.5; }
+    .calendly-panel {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,51,102,0.1);
+      overflow: hidden;
     }
     .calendly-inline-widget {
       min-width: 100%;
-      height: 800px;
+      height: 700px;
+    }
+    @media (min-width: 768px) {
+      .calendly-inline-widget { height: 720px; }
     }
 
-    /* Optimize iframe for desktop to mimic screenshot layout */
-    @media (min-width: 768px) {
-      .calendly-container {
-        padding: 0;
-      }
-      .calendly-inline-widget {
-        height: 720px;
-        width: 100%;
-        max-width: 1000px;
-      }
+    /* ===== WHY BOOK SECTION ===== */
+    #why-book {
+      padding: 70px 24px;
+      background: #fff;
     }
-    
-    body.menu-open .floating-cta {
-  display: none !important;
-} 
+    .section-container { max-width: 1100px; margin: 0 auto; }
+    .section-heading {
+      text-align: center;
+      font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+      color: #003366;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-subheading {
+      text-align: center;
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 44px;
+    }
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .reason-card {
+      background: #f7f9fc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 26px;
+      text-align: center;
+    }
+    .reason-icon { font-size: 2rem; margin-bottom: 12px; }
+    .reason-card h3 { font-size: 0.95rem; color: #003366; font-weight: 700; margin: 0 0 8px; }
+    .reason-card p { font-size: 0.88rem; color: #4a5568; margin: 0; }
+
+    /* ===== FOOTER ===== */
+    footer { background: #003366; color: white; margin-top: 0; }
+    .footer-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 50px 30px 30px;
+      text-align: left;
+    }
+    .services-footer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0; }
+    .footer-column { flex: 1 1 200px; min-width: 180px; }
+    .footer-column h4 {
+      margin-bottom: 14px;
+      color: #ffcc00;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-column ul { list-style: none; padding: 0; margin: 0; }
+    .footer-column ul li { margin-bottom: 9px; }
+    .footer-column ul li a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+    .footer-column ul li a:hover { color: #fff; }
+    .cert-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .cert-logos img {
+      height: 70px;
+      width: auto;
+      background: white;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+    .footer-contact p, .footer-contact .contact-item {
+      margin: 8px 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.8);
+    }
+    .footer-contact .contact-item { display: flex; align-items: center; gap: 8px; }
+    .footer-contact a { color: #ffcc00; text-decoration: none; }
+    .footer-contact a:hover { text-decoration: underline; }
+    .footer-bottom {
+      background: #002244;
+      color: rgba(255,255,255,0.75);
+      padding: 16px 30px;
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom-right { display: flex; gap: 18px; }
+    .footer-bottom-right a { color: #ffcc00; font-size: 1.3rem; text-decoration: none; }
+    .footer-bottom-right a:hover { color: white; }
+    .footer-bottom-right .social-icon { height: 28px; width: auto; transition: transform 0.2s; }
+    .footer-bottom-right .social-icon:hover { transform: scale(1.1); }
+    @media (max-width: 480px) {
+      .footer-wrapper { padding: 40px 20px 20px; gap: 28px; }
+      .footer-bottom { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    }
   </style>
-     <script>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <span class="logo">Global Accounting &amp; Bookkeeping</span>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="global-services.html">Services for Businesses</a></li>
+      <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
+      <li><a href="india-services.html">India Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="book-a-call.html" class="highlight-call-link active">Book a Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header id="main-header">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Free Consultation</span>
+    <h1>Book a Call with Our CA-Led Team</h1>
+    <p class="hero-subheadline">
+      Speak directly with Dinesh Talreja, CA &amp; Global Accounting Advisor. Get clarity on your accounting, bookkeeping, and compliance needs — no sales pitch, just expert guidance.
+    </p>
+  </div>
+</header>
+
+<!-- TRUST SIGNALS BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon">&#9733;</div>
+      <span><strong>CA-Led</strong> Expert Team</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">&#128336;</div>
+      <span>Responds within <strong>1 Business Day</strong></span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">&#127758;</div>
+      <span><strong>4 Countries</strong> Served: US, UK, AU, IN</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">&#128274;</div>
+      <span><strong>100% Confidential</strong> Consultation</span>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING SECTION -->
+<section id="booking">
+  <div class="booking-wrapper">
+    <!-- Left: Info & Trust Cards -->
+    <div class="booking-info">
+      <h2>Schedule Your Free 30-Minute Strategy Call</h2>
+      <p>Whether you need offshore bookkeeping support, India compliance, or a full accounting team extension — let's figure out the best fit for your business.</p>
+      <div class="trust-cards">
+        <div class="trust-card">
+          <div class="trust-card-icon">&#127891;</div>
+          <div>
+            <h4>CA-Qualified Expertise</h4>
+            <p>You'll speak with a Chartered Accountant, not a sales rep. Real answers to real questions.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card-icon">&#128200;</div>
+          <div>
+            <h4>GAAP &amp; IFRS Trained</h4>
+            <p>Our team is trained in US GAAP, IFRS, and Indian accounting standards — all in one call.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card-icon">&#128336;</div>
+          <div>
+            <h4>Responds Within 1 Business Day</h4>
+            <p>Can't find a slot right now? Email us and we'll respond within 1 business day.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card-icon">&#128274;</div>
+          <div>
+            <h4>Confidential &amp; No Obligation</h4>
+            <p>Everything discussed is strictly confidential. No commitment required after the call.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Calendly Widget -->
+    <div class="calendly-panel">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/hireaccountant-globalaccountingandbookkeeping/30min">
+      </div>
+      <script type="text/javascript"
+              src="https://assets.calendly.com/assets/external/widget.js" async>
+      </script>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BOOK A CALL -->
+<section id="why-book">
+  <div class="section-container">
+    <h2 class="section-heading">What We Can Help You With</h2>
+    <p class="section-subheading">In 30 minutes, walk away with a clear plan for your accounting needs.</p>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-icon">&#128196;</div>
+        <h3>Bookkeeping &amp; Accounting</h3>
+        <p>Monthly bookkeeping, financial statements, and reconciliations for US, UK, and Australian businesses.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">&#127968;</div>
+        <h3>CPA Firm Staffing</h3>
+        <p>Offshore tax preparers, audit staff, and bookkeeping experts to scale your CPA practice.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">&#127758;</div>
+        <h3>India Compliance</h3>
+        <p>GST filing, TDS, ROC compliance, and income tax returns for India-based businesses.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">&#128202;</div>
+        <h3>Virtual CFO Services</h3>
+        <p>Strategic financial guidance, cash flow management, and board-ready reporting for growing firms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#why-us">Why Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="book-a-call.html">Book a Call</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Certifications</h4>
+      <div class="cert-logos">
+        <img src="Quickbooks Lv 1.png" alt="QuickBooks Level 1">
+        <img src="Quickbooks Lv 2.png" alt="QuickBooks Level 2">
+        <img src="XERO.png" alt="Xero Advisor">
+      </div>
+    </div>
+  </div>
+  <div class="footer-wrapper services-footer">
+    <div class="footer-column">
+      <h4>Services for Business Owners</h4>
+      <ul>
+        <li><a href="global-services.html#ar-and-ap-management">AR &amp; AP Management</a></li>
+        <li><a href="global-services.html#bookkeeping-services">Bookkeeping Services</a></li>
+        <li><a href="global-services.html#accounting-services">Accounting Services</a></li>
+        <li><a href="global-services.html#year-end-services">Year End Services</a></li>
+        <li><a href="global-services.html#financial-statement-preparation">Financial Statement Preparation</a></li>
+        <li><a href="global-services.html#audit-support">Audit Support</a></li>
+        <li><a href="global-services.html#outsourced-tax-preparations">Outsourced Tax Preparations</a></li>
+        <li><a href="global-services.html#cost-operations-analysis">Cost Operations Analysis</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Services for CPAs</h4>
+      <ul>
+        <li><a href="cpa-firm-hire.html#bookkeeping-expert">Bookkeeping Expert</a></li>
+        <li><a href="cpa-firm-hire.html#staff-accountant">Staff Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#senior-accountant">Senior Accountant</a></li>
+        <li><a href="cpa-firm-hire.html#tax-preparer">Tax Preparer</a></li>
+        <li><a href="cpa-firm-hire.html#audit-support-staff">Audit Support Staff</a></li>
+        <li><a href="cpa-firm-hire.html#arap-billing-specialist">AR/AP Billing Specialist</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-cfo">Virtual CFO</a></li>
+        <li><a href="cpa-firm-hire.html#virtual-assistant">Virtual Assistant</a></li>
+      </ul>
+    </div>
+    <div class="footer-column footer-contact">
+      <h4>Contact</h4>
+      <p class="contact-item">IND: +91 88789 00171</p>
+      <p class="contact-item">
+        <a href="mailto:hireaccountant@globalaccountingandbookkeeping.com.mx">
+          hireaccountant@globalaccountingandbookkeeping.com.mx
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      &copy; Global Accounting &amp; Bookkeeping Services. All rights reserved.
+    </div>
+    <div class="footer-bottom-right">
+      <a href="https://www.linkedin.com/company/global-accounting-and-bookkeeping-services/" target="_blank" rel="noopener">
+        <img src="Linkedin.png" alt="LinkedIn" class="social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
     const isOpen = nav.classList.toggle("show");
-    if (isOpen) {
-      document.body.classList.add("menu-open");
-    } else {
-      document.body.classList.remove("menu-open");
-    }
+    if (isOpen) { document.body.classList.add("menu-open"); }
+    else { document.body.classList.remove("menu-open"); }
   }
-
-  window.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('#main-nav a');
-    const currentPath = window.location.pathname;
-
-    links.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
-
-      if (
-        (currentPath === '/' && (linkPath.endsWith('/index.html') || linkPath === '/')) ||
-        currentPath === linkPath
-      ) {
-        link.classList.add('active');
-      }
-
-      link.addEventListener('click', () => {
-        document.getElementById("navLinks").classList.remove("show");
-        document.body.classList.remove("menu-open");
-      });
-    });
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('sticky-nav', window.scrollY > 10);
   });
 </script>
-</head>
-<body>
-  <header>
-    <h1>Book a Free Consultation Call</h1>
-    <p>Speak with Dinesh Talreja, CA & Global Accounting Advisor</p>
-  </header>
-
-  <nav id="main-nav">
-  <div class="nav-container">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="navLinks">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index.html#about">About Us</a></li>
-  <li><a href="global-services.html">Services for Businesses</a></li>
-  <li><a href="cpa-firm-hire.html">CPA Firms <span class="highlight-hire">HIRE</span></a></li>
-  <li><a href="india-services.html">India Services</a></li>
-  <li><a href="careers.html">Careers</a></li>
-  <li><a href="book-a-call.html" class="highlight-call-link">Book a Call</a></li>
-</ul>
-  </div>
-</nav>
-  <div class="calendly-container">
-    <!-- Calendly Widget -->
-    <div class="calendly-inline-widget" 
-         data-url="https://calendly.com/hireaccountant-globalaccountingandbookkeeping/30min">
-    </div>
-    <script type="text/javascript" 
-            src="https://assets.calendly.com/assets/external/widget.js" async>
-    </script>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Global Accounting & Bookkeeping Services</p>
-  </footer>
 </body>
 </html>

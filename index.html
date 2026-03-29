@@ -793,6 +793,27 @@
       transition: transform 0.2s;
     }
     .footer-bottom-right .social-icon:hover { transform: scale(1.1); }
+    .cert-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .cert-logos img {
+      height: 70px;
+      width: auto;
+      background: white;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+    .services-footer {
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    @media (max-width: 480px) {
+      .footer-wrapper { padding: 40px 20px 20px; gap: 28px; }
+      .footer-bottom { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    }
 
     /* ===== SERVICES SECTION HEADINGS ===== */
     .section-heading {
@@ -1211,7 +1232,17 @@ That's why I launched Global Accounting &amp; Bookkeeping Services — to provid
         <li><a href="book-a-call.html">Book a Call</a></li>
       </ul>
     </div>
+    <div class="footer-column">
+      <h4>Certifications</h4>
+      <div class="cert-logos">
+        <img src="Quickbooks Lv 1.png" alt="QuickBooks Level 1">
+        <img src="Quickbooks Lv 2.png" alt="QuickBooks Level 2">
+        <img src="XERO.png" alt="Xero Advisor">
+      </div>
+    </div>
+  </div>
 
+  <div class="footer-wrapper services-footer">
     <div class="footer-column">
       <h4>Services for Business Owners</h4>
       <ul>
@@ -1225,7 +1256,6 @@ That's why I launched Global Accounting &amp; Bookkeeping Services — to provid
         <li><a href="global-services.html#cost-operations-analysis">Cost Operations Analysis</a></li>
       </ul>
     </div>
-
     <div class="footer-column">
       <h4>Services for CPAs</h4>
       <ul>
@@ -1239,7 +1269,6 @@ That's why I launched Global Accounting &amp; Bookkeeping Services — to provid
         <li><a href="cpa-firm-hire.html#virtual-assistant">Virtual Assistant</a></li>
       </ul>
     </div>
-
     <div class="footer-column footer-contact">
       <h4>Contact</h4>
       <p class="contact-item">IND: +91 88789 00171</p>
@@ -1256,7 +1285,7 @@ That's why I launched Global Accounting &amp; Bookkeeping Services — to provid
       &copy; Global Accounting &amp; Bookkeeping Services. All rights reserved.
     </div>
     <div class="footer-bottom-right">
-      <a href="https://www.linkedin.com/company/global-accounting-and-bookkeeping-services/" target="_blank">
+      <a href="https://www.linkedin.com/company/global-accounting-and-bookkeeping-services/" target="_blank" rel="noopener">
         <img src="Linkedin.png" alt="LinkedIn" class="social-icon">
       </a>
     </div>
