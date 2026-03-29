@@ -654,6 +654,56 @@
       .footer-wrapper { padding: 40px 20px 20px; gap: 28px; }
       .footer-bottom { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
     }
+
+    /* ===== SHARED LINK STYLES ===== */
+    .page-link {
+      display: inline-block;
+      color: #ffcc00;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: filter 0.2s;
+    }
+    .page-link::after {
+      content: ' →';
+    }
+    .page-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #ffcc00;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .page-link:hover {
+      filter: brightness(1.15);
+    }
+    .page-link:hover::before {
+      transform: scaleX(1);
+    }
+    .cta-link {
+      display: inline-block;
+      padding: 10px 22px;
+      background: transparent;
+      color: #ffcc00;
+      border: 2px solid #ffcc00;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .cta-link:hover {
+      background: #ffcc00;
+      color: #003366;
+      transform: translateY(-2px);
+    }
   </style>
 
   <script>
@@ -740,7 +790,7 @@
       </div>
       <h3>AR &amp; AP Management</h3>
       <p>End-to-end Accounts Receivable and Accounts Payable management tailored to your business needs — accurate recording, timely payments, improved vendor relationships, and optimized cash flow.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="outsourcing-bookkeeping-services">
@@ -749,7 +799,7 @@
       </div>
       <h3>Bookkeeping Services</h3>
       <p>Reliable bookkeeping services that keep your financial records accurate, organized, and up to date. From transaction recording to reconciliations, we ensure your books are properly maintained for smooth accounting and reporting.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="accounting-services">
@@ -758,7 +808,7 @@
       </div>
       <h3>Accounting Services</h3>
       <p>Full-scope outsourced accounting solutions — U.S. GAAP or IFRS-compliant, audit-ready books tailored by business size, industry, and regulatory environment. We act as your virtual finance department.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="year-end-services">
@@ -767,7 +817,7 @@
       </div>
       <h3>Year End Services</h3>
       <p>Comprehensive year-end accounting including trial balance review, ledger cleanup, reconciliations, adjustment entries, depreciation schedules, and finalization of financial statements.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="financial-statement-preparation">
@@ -776,7 +826,7 @@
       </div>
       <h3>Financial Statement Preparation</h3>
       <p>Professional preparation of financial statements including the Income Statement (P&amp;L), Statement of Changes in Equity, Statement of Cash Flows, and Balance Sheet — tailored to your reporting requirements.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="audit-support-staff">
@@ -785,7 +835,7 @@
       </div>
       <h3>Audit Support</h3>
       <p>We prepare your business for audits and tax filings by working closely with your CPA or tax consultant — providing breakups, schedules, reconciliations, and additional reports needed to finalize accounts and stay compliant.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="outsourced-tax-preparations">
@@ -794,7 +844,7 @@
       </div>
       <h3>Outsourced Tax Preparations</h3>
       <p>Accurate, compliant, and reviewer-ready tax preparation for individuals, partnerships, corporations, and trusts. Returns are supported with workpapers, schedules, and e-filing formats across multiple jurisdictions.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
     <div class="service-tile" id="cost-operations-analysis">
@@ -803,7 +853,7 @@
       </div>
       <h3>Cost Operations Analysis</h3>
       <p>In-depth cost analysis to identify inefficiencies, reduce overheads, and improve profitability — including cost center breakdowns, variance analysis, margin analysis, and fixed vs. variable cost modeling.</p>
-      <a href="#contact" class="read-more-link">Get Started <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="page-link">Get Started</a>
     </div>
 
   </div>
@@ -815,8 +865,8 @@
     <h2>Ready to Streamline Your Finances?</h2>
     <p>Partner with a CA-led offshore team trusted by businesses across the US, UK, Australia, and India. Let's build your finance function together — starting with a free consultation.</p>
     <div class="cta-btn-group">
-      <a href="book-a-call.html" class="cta-btn-primary">Schedule a Free Call</a>
-      <a href="#contact" class="cta-btn-secondary">Contact Us Today</a>
+      <a href="book-a-call.html" class="cta-link">Schedule a Free Call</a>
+      <a href="#contact" class="cta-link">Contact Us Today</a>
     </div>
   </div>
 </div>
