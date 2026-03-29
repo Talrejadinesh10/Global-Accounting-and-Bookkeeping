@@ -585,6 +585,56 @@
     @media (max-width: 1600px) {
       body { font-size: 15px; }
     }
+
+    /* ===== SHARED LINK STYLES ===== */
+    .page-link {
+      display: inline-block;
+      color: #ffcc00;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: filter 0.2s;
+    }
+    .page-link::after {
+      content: ' →';
+    }
+    .page-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #ffcc00;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    .page-link:hover {
+      filter: brightness(1.15);
+    }
+    .page-link:hover::before {
+      transform: scaleX(1);
+    }
+    .cta-link {
+      display: inline-block;
+      padding: 10px 22px;
+      background: transparent;
+      color: #ffcc00;
+      border: 2px solid #ffcc00;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .cta-link:hover {
+      background: #ffcc00;
+      color: #003366;
+      transform: translateY(-2px);
+    }
   </style>
 
   <script>
@@ -713,8 +763,8 @@
     <h2>Ready to File Compliantly?</h2>
     <p>Talk to our experts for smooth, on-time compliance for your Indian business.</p>
     <div class="cta-banner-btns">
-      <a href="#contact" class="cta-btn-primary">Book a Free Consultation</a>
-      <a href="book-a-call.html" class="cta-btn-secondary">Schedule a Call</a>
+      <a href="#contact" class="cta-link">Book a Free Consultation</a>
+      <a href="book-a-call.html" class="cta-link">Schedule a Call</a>
     </div>
   </div>
 
